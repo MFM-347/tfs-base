@@ -1,0 +1,33 @@
+{
+  "name": "tfs-basecss",
+  "version": "0.9.0",
+  "private": false,
+  "type": "module",
+  "description": "BaseCSS: CSS Reset with responsive typography, ideal for web projects needing minimal styling.",
+  "main": "base.css",
+  "style": "base.css",
+  "files": [
+    "README.md",
+    "base.css"
+  ],
+  "scripts": {
+    "build": "cat src/*.css > base.css",
+    "format": "npx prettier -w ."
+  },
+  "keywords": [
+    "css-reset",
+    "css3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MFM-347/BaseCSS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MFM-347/BaseCSS/issues"
+  },
+  "author": {
+    "name": "Farhan Madni",
+    "email": "madnifm347@outlook.com"
+  },
+  "license": "MIT"
+}
