@@ -12,25 +12,28 @@
 */
 
 :root {
-  --font-normal: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-heading: "Gill Sans", "Gill Sans MT", Calibri, Verdana, Geneva, Tahoma,
-    "Trebuchet MS", "Lucida Sans", sans-serif;
-  --font-mono: ui-monospace, "Courier New", Courier, "Cascadia Code",
-    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-}
-:root,
-.light {
-  --bg: #f0f0f6;
-  --fg: #17171f;
-  --primary: #009be5;
-  --primary-hover: #0085d4;
+  /* Colors */
+  --bg: #f0f0f6; /* Background color for light mode */
+  --fg: #17171f; /* Foreground color for light mode */
+  --primary: #009be5; /* Primary color for buttons and links */
+  --primary-hover: #0085d4; /* Hover state for primary color */
+
+  /* Typography */
+  --font-normal: system-ui, sans-serif; /* Default font for normal text */
+  --font-heading: "Gill Sans", sans-serif; /* Font for headings */
+  --font-mono: ui-monospace, monospace; /* Monospace font for code */
+
+  /* Spacing */
+  --space-xs: 4px; /* Extra small spacing */
+  --space-sm: 8px; /* Small spacing */
+  --space-md: 16px; /* Medium spacing */
+  --space-lg: 32px; /* Large spacing */
 }
 .dark {
-  --bg: #222327;
-  --fg: #f6f6fa;
-  --primary: #009be5;
-  --primary-hover: #2cbfff;
+  --bg: #121212; /* Background color for dark mode */
+  --fg: #e0e0e0; /* Foreground color for dark mode */
+  --primary: #009be5; /* Primary color for buttons and links in dark mode */
+  --primary-hover: #2cbfff; /* Hover state for primary color in dark mode */
 }
 /*
  * ==============================================================
@@ -121,12 +124,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  margin: 0; /* Reset margin to zero for all elements */
+  padding: 0; /* Reset padding to zero for all elements */
+  border: 0; /* Reset border to zero for all elements */
+  font-size: 100%; /* Set font size to 100% for all elements */
+  font: inherit; /* Inherit font properties from parent */
+  vertical-align: baseline; /* Align elements to baseline */
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -140,29 +143,29 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+  display: block; /* Set display to block for HTML5 elements */
 }
 body {
-  line-height: 1;
+  line-height: 1; /* Set line height to 1 for body */
 }
 ol,
 ul {
-  list-style: none;
+  list-style: none; /* Remove list styles for ordered and unordered lists */
 }
 blockquote,
 q {
-  quotes: none;
+  quotes: none; /* Remove quotes for blockquotes and q elements */
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+  content: ""; /* Remove default content for blockquotes and q elements */
+  content: none; /* Ensure no content is displayed */
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse; /* Collapse borders for tables */
+  border-spacing: 0; /* Remove spacing between table cells */
 }
 /*
  * ==============================================================
@@ -170,7 +173,6 @@ table {
  * Copied from Bootstrap
  * ==============================================================
 */
-
 body,
 p,
 div,
@@ -199,7 +201,7 @@ abbr,
 samp,
 kbd,
 var {
-  color: var(--fg);
+  color: var(--fg); /* Set text color to foreground variable */
 }
 body,
 p,
@@ -211,12 +213,12 @@ textarea,
 button,
 a .text,
 .btn {
-  font-size: var(--font-normal);
-  font-size: inherit;
-  margin: inherit;
+  font-size: var(--font-normal); /* Set font size to normal variable */
+  font-size: inherit; /* Inherit font size from parent */
+  margin: inherit; /* Inherit margin from parent */
 }
 p {
-  margin-bottom: 6px;
+  margin-bottom: 6px; /* Set bottom margin for paragraphs */
 }
 h1,
 .h1,
@@ -232,74 +234,74 @@ h6,
 .h6,
 .heading,
 .sub-heading {
-  font-size: var(--font-heading);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 10px;
+  font-size: var(--font-heading); /* Set font size for headings */
+  font-weight: 500; /* Set font weight for headings */
+  line-height: 1.2; /* Set line height for headings */
+  margin-bottom: 10px; /* Set bottom margin for headings */
 }
 h1,
 .h1,
 .heading {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.375rem + 1.5vw); /* Responsive font size for h1 */
 }
 @media (min-width: 1200px) {
   h1,
   .h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Set font size for h1 on large screens */
   }
 }
 h2,
 .h2,
 .sub-heading {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.325rem + 0.9vw); /* Responsive font size for h2 */
 }
 @media (min-width: 1200px) {
   h2,
   .h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Set font size for h2 on large screens */
   }
 }
 h3,
 .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.3rem + 0.6vw); /* Responsive font size for h3 */
 }
 @media (min-width: 1200px) {
   h3,
   .h3 {
-    font-size: 1.75rem;
+    font-size: 1.75rem; /* Set font size for h3 on large screens */
   }
 }
 h4,
 .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.275rem + 0.3vw); /* Responsive font size for h4 */
 }
 @media (min-width: 1200px) {
   h4,
   .h4 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Set font size for h4 on large screens */
   }
 }
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Set font size for h5 */
 }
 h6,
 .h6 {
-  font-size: 1rem;
+  font-size: 1rem; /* Set font size for h6 */
 }
 .title {
-  font-size: calc(1.425rem + 2.1vw);
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 8px 0;
+  font-size: calc(1.425rem + 2.1vw); /* Responsive font size for title */
+  font-weight: 700; /* Set font weight for title */
+  line-height: 1.2; /* Set line height for title */
+  margin: 8px 0; /* Set margin for title */
 }
 code,
 abbr,
 samp,
 kbd,
 var {
-  font-family: var(--font-mono);
-  padding: 2px 5px;
+  font-family: var(--font-mono); /* Set font family for code elements */
+  padding: 2px 5px; /* Add padding for code elements */
 }
 /*
  * ==============================================================
@@ -308,43 +310,93 @@ var {
 */
 
 .bgc {
-  background: var(--bg);
-  color: var(--fg);
-  min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
+  background: var(--bg); /* Set background color using variable */
+  color: var(--fg); /* Set text color using variable */
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  max-width: 100vw; /* Set maximum width to full viewport width */
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 .center {
-  display: grid;
-  place-items: center;
+  display: grid; /* Use grid layout for centering */
+  place-items: center; /* Center items in grid */
 }
 .center-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex; /* Use flexbox for column centering */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack items in a column */
 }
-.btn {
-  background: inherit;
-  color: var(--fg, inherit);
-  display: inline-block;
-  width: auto;
-  text-align: center;
-  padding: 8px 16px;
-  margin: 4px 3.2px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: background border 0.3s ease-in;
+.text-center {
+  text-align: center; /* Center text alignment */
+}
+.text-left {
+  text-align: left; /* Left text alignment */
+}
+.text-right {
+  text-align: right; /* Right text alignment */
 }
 input,
 textarea,
+select,
 .inp {
-  accent-color: var(--primary);
+  accent-color: var(--primary); /* Set accent color for input elements */
+}
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #ccc; /* Set border for input elements */
+  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding using spacing variables */
+  border-radius: 0.25rem; /* Set border radius for rounded corners */
+  font-size: 1rem; /* Set font size for input elements */
+  width: 100%; /* Set width to 100% */
+  max-width: 100%; /* Set maximum width to 100% */
+}
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary); /* Change border color on focus */
+  box-shadow: 0 0 4px var(--primary); /* Add shadow on focus */
+}
+.btn {
+  background: inherit; /* Inherit background color */
+  color: var(--fg, inherit); /* Set text color using foreground variable */
+  font-size: 1rem; /* Set font size for buttons */
+  display: inline-block; /* Set display to inline-block */
+  width: auto; /* Set width to auto */
+  text-align: center; /* Center text in button */
+  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding using spacing variables */
+  margin: 4px 3.2px; /* Set margin for buttons */
+  border-radius: 0.25rem; /* Set border radius for rounded corners */
+  border: none; /* Remove border */
+  outline: inherit; /* Inherit outline */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background border 0.3s ease-in; /* Add transition for background and border */
 }
 .btn-primary {
-  background: var(--primary);
+  background: var(--primary); /* Set background color for primary button */
 }
 .btn-primary:hover {
-  background: var(--primary-hover);
+  background: var(--primary-hover); /* Change background color on hover */
+}
+.btn-primary:focus {
+  background: var(--primary); /* Maintain background color on focus */
+  outline: 2px dashed var(--primary); /* Add dashed outline on focus */
+  outline-offset: 4px; /* Offset outline */
+}
+.btn-outline {
+  border: 2px solid var(--primary); /* Set border for outline button */
+  background: transparent; /* Set background to transparent */
+  color: var(--primary); /* Set text color for outline button */
+}
+.btn-outline:hover {
+  background: var(--primary); /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+.btn:disabled {
+  cursor: not-allowed; /* Change cursor to not-allowed for disabled buttons */
+  opacity: 0.6; /* Reduce opacity for disabled buttons */
 }

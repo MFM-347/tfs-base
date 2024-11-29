@@ -1,26 +1,35 @@
 {
   "name": "tfs-basecss",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": false,
   "type": "module",
-  "description": "BaseCSS: CSS Reset with responsive typography, ideal for web projects needing minimal styling.",
+  "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
   "main": "base.css",
   "style": "base.css",
   "files": [
     "README.md",
-    "base.css"
+    "base.css",
+    "base.min.css"
   ],
   "scripts": {
-    "build": "cat src/*.css > base.css",
+    "create": "cat src/*.css > base.css && npm run format",
+    "build": "npm run create && npx clean-css-cli base.css -o base.min.css",
     "format": "npx prettier -w ."
   },
   "keywords": [
-    "css-reset",
-    "css3"
+    "css",
+    "library",
+    "responsive-design",
+    "lightweight-css",
+    "minimal-css",
+    "frontend",
+    "web-design",
+    "modern-css",
+    "css-library"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/MFM-347/BaseCSS.git"
+    "url": "git+https://github.com/MFM-347/BaseCSS.git"
   },
   "bugs": {
     "url": "https://github.com/MFM-347/BaseCSS/issues"

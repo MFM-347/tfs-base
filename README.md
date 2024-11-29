@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/npm/v/tfs-basecss.svg)](https://www.npmjs.com/package/tfs-basecss)
 [![Downloads](https://img.shields.io/npm/dm/tfs-basecss)](https://www.npmjs.com/package/tfs-basecss)
 
-BaseCSS is a lightweight CSS base reset with responsive typography, designed to serve as a minimal starting point for web projects.
+BaseCSS is a minimal and flexible CSS library designed for fast, responsive, and maintainable web development. Ideal for developers looking for simplicity and scalability.
 
 ## Features
 
@@ -21,12 +21,12 @@ npm i tfs-basecss
 
 ### Importing BaseCSS
 
-#### In an HTML File:
+#### In Plain HTML:
 
 Link the CSS file in your `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="node_modules/tfs-basecss/base.css" />
+<link rel="stylesheet" href="node_modules/tfs-basecss/base.min.css" />
 ```
 
 #### In a JavaScript/TypeScript Project:
@@ -34,15 +34,15 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import "tfs-basecss/base.css";
+import "tfs-basecss/base.min.css";
 ```
 
-#### In a SCSS File:
+#### In SCSS:
 
 If you're using SCSS:
 
 ```scss
-@import "node_modules/tfs-basecss/base.css";
+@import "node_modules/tfs-basecss/base.min.css";
 ```
 
 ---
@@ -56,6 +56,10 @@ Once BaseCSS is imported, it will:
 3. Provide a clean slate for adding your custom styles.
 
 You can now start building your styles on top of this foundation.
+
+## Contributing
+
+We welcome contributions! Please check the [CONTRIBUTING.md](https://github.com/MFM-347/BaseCSS/blob/main/CONTRIBUTING.md) for guidelines.
 
 ## Author
 

@@ -4,7 +4,6 @@
  * Copied from Bootstrap
  * ==============================================================
 */
-
 body,
 p,
 div,
@@ -33,7 +32,7 @@ abbr,
 samp,
 kbd,
 var {
-  color: var(--fg);
+  color: var(--fg); /* Set text color to foreground variable */
 }
 body,
 p,
@@ -45,12 +44,12 @@ textarea,
 button,
 a .text,
 .btn {
-  font-size: var(--font-normal);
-  font-size: inherit;
-  margin: inherit;
+  font-size: var(--font-normal); /* Set font size to normal variable */
+  font-size: inherit; /* Inherit font size from parent */
+  margin: inherit; /* Inherit margin from parent */
 }
 p {
-  margin-bottom: 6px;
+  margin-bottom: 6px; /* Set bottom margin for paragraphs */
 }
 h1,
 .h1,
@@ -66,72 +65,72 @@ h6,
 .h6,
 .heading,
 .sub-heading {
-  font-size: var(--font-heading);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 10px;
+  font-size: var(--font-heading); /* Set font size for headings */
+  font-weight: 500; /* Set font weight for headings */
+  line-height: 1.2; /* Set line height for headings */
+  margin-bottom: 10px; /* Set bottom margin for headings */
 }
 h1,
 .h1,
 .heading {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.375rem + 1.5vw); /* Responsive font size for h1 */
 }
 @media (min-width: 1200px) {
   h1,
   .h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Set font size for h1 on large screens */
   }
 }
 h2,
 .h2,
 .sub-heading {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1.325rem + 0.9vw); /* Responsive font size for h2 */
 }
 @media (min-width: 1200px) {
   h2,
   .h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Set font size for h2 on large screens */
   }
 }
 h3,
 .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1.3rem + 0.6vw); /* Responsive font size for h3 */
 }
 @media (min-width: 1200px) {
   h3,
   .h3 {
-    font-size: 1.75rem;
+    font-size: 1.75rem; /* Set font size for h3 on large screens */
   }
 }
 h4,
 .h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.275rem + 0.3vw); /* Responsive font size for h4 */
 }
 @media (min-width: 1200px) {
   h4,
   .h4 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Set font size for h4 on large screens */
   }
 }
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1.25rem; /* Set font size for h5 */
 }
 h6,
 .h6 {
-  font-size: 1rem;
+  font-size: 1rem; /* Set font size for h6 */
 }
 .title {
-  font-size: calc(1.425rem + 2.1vw);
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 8px 0;
+  font-size: calc(1.425rem + 2.1vw); /* Responsive font size for title */
+  font-weight: 700; /* Set font weight for title */
+  line-height: 1.2; /* Set line height for title */
+  margin: 8px 0; /* Set margin for title */
 }
 code,
 abbr,
 samp,
 kbd,
 var {
-  font-family: var(--font-mono);
-  padding: 2px 5px;
+  font-family: var(--font-mono); /* Set font family for code elements */
+  padding: 2px 5px; /* Add padding for code elements */
 }

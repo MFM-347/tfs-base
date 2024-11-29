@@ -5,23 +5,26 @@
 */
 
 :root {
-  --font-normal: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-heading: "Gill Sans", "Gill Sans MT", Calibri, Verdana, Geneva, Tahoma,
-    "Trebuchet MS", "Lucida Sans", sans-serif;
-  --font-mono: ui-monospace, "Courier New", Courier, "Cascadia Code",
-    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-}
-:root,
-.light {
-  --bg: #f0f0f6;
-  --fg: #17171f;
-  --primary: #009be5;
-  --primary-hover: #0085d4;
+  /* Colors */
+  --bg: #f0f0f6; /* Background color for light mode */
+  --fg: #17171f; /* Foreground color for light mode */
+  --primary: #009be5; /* Primary color for buttons and links */
+  --primary-hover: #0085d4; /* Hover state for primary color */
+
+  /* Typography */
+  --font-normal: system-ui, sans-serif; /* Default font for normal text */
+  --font-heading: "Gill Sans", sans-serif; /* Font for headings */
+  --font-mono: ui-monospace, monospace; /* Monospace font for code */
+
+  /* Spacing */
+  --space-xs: 4px; /* Extra small spacing */
+  --space-sm: 8px; /* Small spacing */
+  --space-md: 16px; /* Medium spacing */
+  --space-lg: 32px; /* Large spacing */
 }
 .dark {
-  --bg: #222327;
-  --fg: #f6f6fa;
-  --primary: #009be5;
-  --primary-hover: #2cbfff;
+  --bg: #121212; /* Background color for dark mode */
+  --fg: #e0e0e0; /* Foreground color for dark mode */
+  --primary: #009be5; /* Primary color for buttons and links in dark mode */
+  --primary-hover: #2cbfff; /* Hover state for primary color in dark mode */
 }

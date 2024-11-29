@@ -87,12 +87,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+  margin: 0; /* Reset margin to zero for all elements */
+  padding: 0; /* Reset padding to zero for all elements */
+  border: 0; /* Reset border to zero for all elements */
+  font-size: 100%; /* Set font size to 100% for all elements */
+  font: inherit; /* Inherit font properties from parent */
+  vertical-align: baseline; /* Align elements to baseline */
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -106,27 +106,27 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+  display: block; /* Set display to block for HTML5 elements */
 }
 body {
-  line-height: 1;
+  line-height: 1; /* Set line height to 1 for body */
 }
 ol,
 ul {
-  list-style: none;
+  list-style: none; /* Remove list styles for ordered and unordered lists */
 }
 blockquote,
 q {
-  quotes: none;
+  quotes: none; /* Remove quotes for blockquotes and q elements */
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+  content: ""; /* Remove default content for blockquotes and q elements */
+  content: none; /* Ensure no content is displayed */
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse; /* Collapse borders for tables */
+  border-spacing: 0; /* Remove spacing between table cells */
 }
