@@ -1,7 +1,7 @@
 # BaseCSS
 
-[![Version](https://img.shields.io/npm/v/tfs-basecss.svg)](https://www.npmjs.com/package/tfs-basecss)
-[![Downloads](https://img.shields.io/npm/dm/tfs-basecss)](https://www.npmjs.com/package/tfs-basecss)
+[![Version](https://img.shields.io/npm/v/@tfs-8/basecss.svg)](https://www.npmjs.com/package/@tfs-8/basecss)
+[![Downloads](https://img.shields.io/npm/dm/@tfs-8/basecss)](https://www.npmjs.com/package/@tfs-8/basecss)
 
 BaseCSS is a minimal and flexible CSS library designed for fast, responsive, and maintainable web development. Ideal for developers looking for simplicity and scalability.
 
@@ -11,22 +11,24 @@ BaseCSS is a minimal and flexible CSS library designed for fast, responsive, and
 - **Responsive Typography**: Automatically adjusts font sizes for optimal readability on different screen sizes.
 - **Minimal Styling**: Provides a clean slate for building custom designs.
 
-## Installation and Usage
+## Using BaseCSS via NPM
+
+### Installation
 
 To install the package, use the following command:
 
 ```bash
-npm i tfs-basecss
+npm i @tfs-8/basecss
 ```
 
-### Importing BaseCSS
+### Importing
 
 #### In Plain HTML:
 
 Link the CSS file in your `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="node_modules/tfs-basecss/base.min.css" />
+<link rel="stylesheet" href="node_modules/@tfs-8/basecss/base.min.css" />
 ```
 
 #### In a JavaScript/TypeScript Project:
@@ -34,7 +36,7 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import "tfs-basecss/base.min.css";
+import "@tfs-8/basecss/base.min.css";
 ```
 
 #### In SCSS:
@@ -42,10 +44,44 @@ import "tfs-basecss/base.min.css";
 If you're using SCSS:
 
 ```scss
-@import "node_modules/tfs-basecss/base.min.css";
+@import "node_modules/@tfs-8/basecss/base.min.css";
 ```
 
----
+## Using BaseCSS via NPM
+
+### Installation
+
+To install the package, use the following command:
+
+```url
+https://unpkg.com/@tfs-8/basecss/base.min.css
+```
+
+### Importing
+
+#### In Plain HTML:
+
+Link the CSS file in your `<head>` tag:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@tfs-8/basecss/base.min.css" />
+```
+
+#### In a JavaScript/TypeScript Project:
+
+Import the CSS in your entry file:
+
+```javascript
+import "https://unpkg.com/@tfs-8/basecss/base.min.css";
+```
+
+#### In SCSS:
+
+If you're using SCSS:
+
+```scss
+@import "https://unpkg.com/@tfs-8/basecss/base.min.css";
+```
 
 ## Getting Started
 
@@ -61,9 +97,9 @@ You can now start building your styles on top of this foundation.
 
 We welcome contributions! Please check the [CONTRIBUTING.md](https://github.com/MFM-347/BaseCSS/blob/main/CONTRIBUTING.md) for guidelines.
 
-## Author
+## Credits
 
-Created and maintained by [Farhan Madni](https://github.com/MFM-347).
+Created with ❤️ by [@MFM-347](https://github.com/mfm-347).
 
 ## License
 
