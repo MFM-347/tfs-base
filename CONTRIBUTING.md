@@ -1,79 +1,152 @@
 # Contributing to BaseCSS
 
-First off, thank you for considering contributing to BaseCSS! 🎉  
-We welcome contributions of all types, including bug reports, feature requests, documentation updates, and code improvements.
+Thank you for considering contributing to BaseCSS! 🎉  
+Your contributions, whether big or small, are essential to the success of this project. We welcome **bug reports**, **feature requests**, **documentation updates**, and **code improvements**.
 
----
+## Contribution Guide
 
-## How to Contribute
-
-### 1. Fork the Repository
+### Step 1: Fork the Repository
 
 1. Navigate to the [BaseCSS repository](https://github.com/MFM-347/BaseCSS).
-2. Click the **Fork** button in the top-right corner.
+2. Click the **Fork** button in the top-right corner to create your own copy of the repository.
 
-### 2. Clone the Repository
+### Step 2: Clone Your Fork
 
-Clone your fork to your local machine:
+Clone your forked repository to your local machine:
 
 ```bash
 git clone https://github.com/<your-username>/BaseCSS.git
+cd BaseCSS
 ```
 
-### 3. Create a New Branch
+### Step 3: Set Up Your Environment
 
-Create a branch for your changes:
+Install the required dependencies:
 
 ```bash
-git checkout -b feature-or-fix-name
+npm install
 ```
 
-### 4. Make Your Changes
+Ensure everything is working by running the project locally:
 
-- Update the code, fix bugs, or add new features in the `src` folder.
-- Ensure your changes follow good coding practices and are well-documented.
+```bash
+npm run dev
+```
 
-### 5. Build the Project
+### Step 4: Create a Branch
 
-After making changes to the `src` files, rebuild the `base.css` file:
+Create a descriptive branch name based on your contribution:
+
+```bash
+git checkout -b <branch-name>
+```
+
+Examples:
+
+- `fix-typo-in-readme`
+- `feature-add-dark-mode`
+- `enhance-error-handling`
+
+### Step 5: Make Your Changes
+
+- Update the code, fix bugs, or implement new features in the `src` folder.
+- Ensure your changes:
+  - Are properly documented.
+  - Adhere to coding best practices and project conventions.
+  - Are accompanied by relevant test cases, if applicable.
+
+### Step 6: Build the Project
+
+After making your changes, rebuild the project to generate updated files:
 
 ```bash
 npm run build
 ```
 
-### 6. Test Your Changes
+### Step 7: Test Your Changes
 
-Ensure that the changes work as expected.
+- Thoroughly test your changes to ensure they work as expected.
+- Use the local development server (`npm run dev`) to verify functionality.
+- If applicable, run automated tests to confirm your changes don’t break existing functionality.
 
-### 7. Commit and Push
+### Step 8: Commit Your Work
 
-Commit your changes with a meaningful commit message:
+Commit your changes with a clear and descriptive commit message:
 
 ```bash
 git add .
-git commit -m "Description of changes"
-git push origin feature-or-fix-name
+git commit -m "feat: Add dark mode toggle"
 ```
 
-### 8. Submit a Pull Request
+Use [Conventional Commits](https://www.conventionalcommits.org/) format for consistency:
 
-- Navigate to your forked repository on GitHub.
-- Click the **Pull Request** button.
-- Provide a clear description of the changes in your pull request.
+- `feat`: New features
+- `fix`: Bug fixes
+- `docs`: Documentation updates
+- `style`: Code style changes (non-functional)
+- `refactor`: Code refactoring
+- `test`: Adding or updating tests
+
+### Step 9: Push and Submit a Pull Request
+
+Push your branch to your fork:
+
+```bash
+git push origin <branch-name>
+```
+
+Then, navigate to the **original BaseCSS repository** and submit a pull request.  
+Include the following in your PR description:
+
+- A summary of changes.
+- Related issue IDs (e.g., "Closes #123").
+- Screenshots or videos (if applicable).
 
 ## Reporting Issues
 
-If you encounter a bug or have a feature request, please [create an issue](https://github.com/MFM-347/BaseCSS/issues) with the following details:
+Encountered a bug or have a great idea for a new feature? Create an issue [here](https://github.com/MFM-347/BaseCSS/issues).
 
-- **Bug reports**: Include steps to reproduce the issue and, if possible, a minimal example.
-- **Feature requests**: Clearly describe the feature, its use case, and why it would be valuable.
+### Guidelines for Issues:
+
+- **Bug Reports**:  
+  Include:
+
+  - Steps to reproduce the issue.
+  - Expected vs. actual behavior.
+  - Relevant screenshots or logs (if available).
+
+- **Feature Requests**:  
+  Describe:
+  - The feature and its use case.
+  - Any benefits or improvements it will bring.
 
 ## Code Standards
 
-- Follow a clean and consistent coding style.
-- Keep commits small and focused.
-- Write meaningful commit messages.
+To maintain a high-quality codebase, please follow these guidelines:
 
----
+1. **Coding Style**:
 
-Thank you ✨ for contributing to BaseCSS!
+   - Use clean, consistent, and readable code.
+   - Follow the existing project conventions.
+
+2. **Commit Practices**:
+
+   - Keep commits small and focused.
+   - Write clear and meaningful commit messages.
+
+3. **Documentation**:
+
+   - Update documentation for any changes that impact the project’s functionality or usage.
+
+4. **Testing**:
+   - Add or update tests for your changes where applicable.
+   - Ensure all tests pass before submitting your PR.
+
+## Need Help?
+
+If you’re unsure about something or need guidance:
+
+- Start a [discussion](https://github.com/MFM-347/BaseCSS/discussions).
+- Join our community for support and collaboration.
+
+Thank you ✨ for contributing to BaseCSS! Your effort makes this project better for everyone.
