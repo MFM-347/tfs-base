@@ -6,7 +6,7 @@
 
 :root {
   /* Colors */
-  --theme: #3e7bfc; /* UniveralThemeColor */
+  --theme: #3f7bfc; /* UniveralThemeColor */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
   --primary: #1f55f1; /* Primary color for buttons and links */
@@ -26,6 +26,6 @@
 .dark {
   --bg: #121212; /* Background color for dark mode */
   --fg: #e0e0e0; /* Foreground color for dark mode */
-  --primary: #1f55f1; /* Primary color for buttons and links in dark mode */
-  --primary-hover: #3e7bfc; /* Hover state for primary color in dark mode */
+  --primary: #1f54f1; /* Primary color for buttons and links in dark mode */
+  --primary-hover: #3f7bfc; /* Hover state for primary color in dark mode */
 }

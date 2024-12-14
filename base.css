@@ -13,7 +13,7 @@
 
 :root {
   /* Colors */
-  --theme: #3e7bfc; /* UniveralThemeColor */
+  --theme: #3f7bfc; /* UniveralThemeColor */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
   --primary: #1f55f1; /* Primary color for buttons and links */
@@ -33,8 +33,8 @@
 .dark {
   --bg: #121212; /* Background color for dark mode */
   --fg: #e0e0e0; /* Foreground color for dark mode */
-  --primary: #1f55f1; /* Primary color for buttons and links in dark mode */
-  --primary-hover: #3e7bfc; /* Hover state for primary color in dark mode */
+  --primary: #1f54f1; /* Primary color for buttons and links in dark mode */
+  --primary-hover: #3f7bfc; /* Hover state for primary color in dark mode */
 }
 /*
  * ==============================================================
@@ -400,4 +400,43 @@ input[type="password"]:focus {
 .btn:disabled {
   cursor: not-allowed; /* Change cursor to not-allowed for disabled buttons */
   opacity: 0.6; /* Reduce opacity for disabled buttons */
+}
+/*
+ * ==============================================================
+ * Scroll
+ * ==============================================================
+*/
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+  height: 12px; /* Set the height of the horizontal scrollbar */
+}
+
+/* Style for the scrollbar track (the area the scrollbar slides in) */
+::-webkit-scrollbar-track {
+  background-color: #eee; /* Light gray background for the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Style for the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Darker gray color for the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Style for the scrollbar thumb when hovered over */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color for the thumb on hover */
+}
+
+/* Style for the corner where both horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  background-color: #eee; /* Light gray background for the corner */
+}
+
+/* Custom scrollbar styles for Firefox */
+html {
+  scrollbar-width: thin; /* Set the scrollbar width to thin */
+  scrollbar-color: #888 #eee; /* Set the thumb and track colors */
 }

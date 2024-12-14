@@ -47,11 +47,11 @@ If you're using SCSS:
 @import "node_modules/@tfs-8/basecss/base.min.css";
 ```
 
-## Using BaseCSS via NPM
+## Using BaseCSS via CDN
 
 ### Installation
 
-To install the package, use the following command:
+To use the CDN, link to the following URL:
 
 ```url
 https://unpkg.com/@tfs-8/basecss/base.min.css
