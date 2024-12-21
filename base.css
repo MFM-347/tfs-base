@@ -16,8 +16,8 @@
   --theme: #3f7bfc; /* UniveralThemeColor */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
-  --primary: #1f55f1; /* Primary color for buttons and links */
-  --primary-hover: #173fde; /* Hover state for primary color */
+  --primary: #3f7bfc; /* Primary color for buttons and links */
+  --primary-hover: #1f55f1; /* Hover state for primary color */
 
   /* Typography */
   --font-normal: system-ui, sans-serif; /* Default font for normal text */
@@ -171,7 +171,7 @@ table {
 /*
  * ==============================================================
  * Typography
- * Copied from Bootstrap
+ * Font sizes are copied from Bootstrap
  * ==============================================================
 */
 body,
@@ -214,7 +214,7 @@ textarea,
 button,
 a .text,
 .btn {
-  font-size: var(--font-normal); /* Set font size to normal variable */
+  font-family: var(--font-normal); /* Set font family to normal variable */
   font-size: inherit; /* Inherit font size from parent */
   margin: inherit; /* Inherit margin from parent */
 }
@@ -235,7 +235,7 @@ h6,
 .h6,
 .heading,
 .sub-heading {
-  font-size: var(--font-heading); /* Set font size for headings */
+  font-family: var(--font-heading); /* Set font family for headings */
   font-weight: 500; /* Set font weight for headings */
   line-height: 1.2; /* Set line height for headings */
   margin-bottom: 10px; /* Set bottom margin for headings */
@@ -363,7 +363,7 @@ input[type="password"]:focus {
   box-shadow: 0 0 4px var(--primary); /* Add shadow on focus */
 }
 .btn {
-  background: inherit; /* Inherit background color */
+  background: var(--primary); /* Inherit background color */
   color: var(--fg, inherit); /* Set text color using foreground variable */
   font-size: 1rem; /* Set font size for buttons */
   display: inline-block; /* Set display to inline-block */
@@ -377,13 +377,10 @@ input[type="password"]:focus {
   cursor: pointer; /* Change cursor to pointer */
   transition: background border 0.3s ease-in; /* Add transition for background and border */
 }
-.btn-primary {
-  background: var(--primary); /* Set background color for primary button */
-}
-.btn-primary:hover {
+.btn:hover {
   background: var(--primary-hover); /* Change background color on hover */
 }
-.btn-primary:focus {
+.btn:focus {
   background: var(--primary); /* Maintain background color on focus */
   outline: 2px dashed var(--primary); /* Add dashed outline on focus */
   outline-offset: 4px; /* Offset outline */

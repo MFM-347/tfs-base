@@ -57,7 +57,7 @@ input[type="password"]:focus {
   box-shadow: 0 0 4px var(--primary); /* Add shadow on focus */
 }
 .btn {
-  background: inherit; /* Inherit background color */
+  background: var(--primary); /* Inherit background color */
   color: var(--fg, inherit); /* Set text color using foreground variable */
   font-size: 1rem; /* Set font size for buttons */
   display: inline-block; /* Set display to inline-block */
@@ -71,13 +71,10 @@ input[type="password"]:focus {
   cursor: pointer; /* Change cursor to pointer */
   transition: background border 0.3s ease-in; /* Add transition for background and border */
 }
-.btn-primary {
-  background: var(--primary); /* Set background color for primary button */
-}
-.btn-primary:hover {
+.btn:hover {
   background: var(--primary-hover); /* Change background color on hover */
 }
-.btn-primary:focus {
+.btn:focus {
   background: var(--primary); /* Maintain background color on focus */
   outline: 2px dashed var(--primary); /* Add dashed outline on focus */
   outline-offset: 4px; /* Offset outline */

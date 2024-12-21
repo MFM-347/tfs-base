@@ -1,7 +1,7 @@
 /*
  * ==============================================================
  * Typography
- * Copied from Bootstrap
+ * Font sizes are copied from Bootstrap
  * ==============================================================
 */
 body,
@@ -44,7 +44,7 @@ textarea,
 button,
 a .text,
 .btn {
-  font-size: var(--font-normal); /* Set font size to normal variable */
+  font-family: var(--font-normal); /* Set font family to normal variable */
   font-size: inherit; /* Inherit font size from parent */
   margin: inherit; /* Inherit margin from parent */
 }
@@ -65,7 +65,7 @@ h6,
 .h6,
 .heading,
 .sub-heading {
-  font-size: var(--font-heading); /* Set font size for headings */
+  font-family: var(--font-heading); /* Set font family for headings */
   font-weight: 500; /* Set font weight for headings */
   line-height: 1.2; /* Set line height for headings */
   margin-bottom: 10px; /* Set bottom margin for headings */
