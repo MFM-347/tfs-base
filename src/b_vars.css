@@ -1,16 +1,12 @@
 /*
- * ==============================================================
- * Variables
- * ==============================================================
+ * <Variables>
 */
 
 :root {
   /* Colors */
-  --theme: #3f7bfc; /* UniveralThemeColor */
+  --theme: #5c6bff; /* UniveralThemeColor */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
-  --primary: #3f7bfc; /* Primary color for buttons and links */
-  --primary-hover: #1f55f1; /* Hover state for primary color */
 
   /* Typography */
   --font-normal: system-ui, sans-serif; /* Default font for normal text */
@@ -26,6 +22,8 @@
 .dark {
   --bg: #121212; /* Background color for dark mode */
   --fg: #e0e0e0; /* Foreground color for dark mode */
-  --primary: #1f54f1; /* Primary color for buttons and links in dark mode */
-  --primary-hover: #3f7bfc; /* Hover state for primary color in dark mode */
 }
+
+/* 
+ * </Variables>
+*/

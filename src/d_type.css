@@ -1,9 +1,9 @@
 /*
- * ==============================================================
- * Typography
- * Font sizes are copied from Bootstrap
- * ==============================================================
+ * <Typography
+ *   copyrights="Font sizes are copied from Bootstrap"
+ * >
 */
+
 body,
 p,
 div,
@@ -134,3 +134,7 @@ var {
   font-family: var(--font-mono); /* Set font family for code elements */
   padding: 2px 5px; /* Add padding for code elements */
 }
+
+/*
+ * </Typography>
+*/

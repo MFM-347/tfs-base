@@ -1,8 +1,8 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "private": false,
-  "type": "module",
+  "type": "commonjs",
   "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
   "main": "base.min.css",
   "style": "base.min.css",
@@ -11,10 +11,9 @@
     "base.min.css"
   ],
   "scripts": {
-    "create": "cat src/*.css > base.css",
-    "build": "npm run create && npm run format && npm run minify",
-    "minify": "clean-css-cli base.css -o base.min.css",
-    "format": "prettier -w ."
+    "build": "node build.js && npm run format && npm run minify",
+    "minify": "npx clean-css-cli base.css -o base.min.css",
+    "format": "npx prettier -w ."
   },
   "keywords": [
     "css",
