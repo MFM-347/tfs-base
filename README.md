@@ -2,10 +2,11 @@
 
 [![Version](https://img.shields.io/npm/v/@tfs-8/basecss.svg)](https://www.npmjs.com/package/@tfs-8/basecss)
 [![Downloads](https://img.shields.io/npm/dm/@tfs-8/basecss)](https://www.npmjs.com/package/@tfs-8/basecss)
-[![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/MFM-347/BaseCSS/blob/main/LICENSE)
+[![Number of GitHub contributors](https://img.shields.io/github/contributors/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/graphs/contributors)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/)
 [![GitHub release; latest by date](https://img.shields.io/github/v/release/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/releases/latest)
 [![Number of GitHub stars](https://img.shields.io/github/stars/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/stargazers)
+[![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/MFM-347/BaseCSS/blob/main/LICENSE)
 
 BaseCSS is a minimal and flexible CSS library designed for fast, responsive, and maintainable web development. Ideal for developers looking for simplicity and scalability.
 
@@ -107,4 +108,4 @@ Created with ❤️ by [@MFM-347](https://github.com/mfm-347).
 
 ## License
 
-The code in this repository is licensed under the **MIT License**.
+The code in this repository is licensed under the **MIT License**. View more info [here](https://github.com/MFM-347/BaseCSS/blob/main/LICENSE)
