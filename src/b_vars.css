@@ -4,21 +4,22 @@
 
 :root {
   /* Colors */
-  --theme: #5c6bff; /* UniveralThemeColor */
+  --theme: #5c6bff; /* Universal theme color for consistent branding */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
 
   /* Typography */
-  --font-normal: system-ui, sans-serif; /* Default font for normal text */
-  --font-heading: "Gill Sans", sans-serif; /* Font for headings */
-  --font-mono: ui-monospace, monospace; /* Monospace font for code */
+  --font-normal: system-ui, sans-serif; /* Default font for normal text elements */
+  --font-heading: "Gill Sans", sans-serif; /* Font style for headings */
+  --font-mono: ui-monospace, monospace; /* Monospace font style for code-related elements */
 
   /* Spacing */
-  --space-xs: 4px; /* Extra small spacing */
-  --space-sm: 8px; /* Small spacing */
-  --space-md: 16px; /* Medium spacing */
-  --space-lg: 32px; /* Large spacing */
+  --space-xs: 4px; /* Extra small spacing for tight layouts */
+  --space-sm: 8px; /* Small spacing for compact layouts */
+  --space-md: 16px; /* Medium spacing for regular gaps */
+  --space-lg: 32px; /* Large spacing for wide gaps */
 }
+
 .dark {
   --bg: #121212; /* Background color for dark mode */
   --fg: #e0e0e0; /* Foreground color for dark mode */

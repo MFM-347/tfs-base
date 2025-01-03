@@ -5,6 +5,7 @@
  * >
 */
 
+/* Universal reset for all elements */
 html,
 body,
 div,
@@ -86,13 +87,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0; /* Reset margin to zero for all elements */
-  padding: 0; /* Reset padding to zero for all elements */
-  border: 0; /* Reset border to zero for all elements */
-  font-size: 100%; /* Set font size to 100% for all elements */
+  margin: 0; /* Reset all margins to zero */
+  padding: 0; /* Reset all paddings to zero */
+  border: 0; /* Remove all borders */
+  font-size: 100%; /* Normalize font size to 100% */
   font: inherit; /* Inherit font properties from parent */
-  vertical-align: baseline; /* Align elements to baseline */
+  vertical-align: baseline; /* Align elements to the text baseline */
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -105,28 +107,37 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; /* Set display to block for HTML5 elements */
+  display: block; /* Set modern HTML5 elements to block layout */
 }
+
+/* Body-specific styles */
 body {
-  line-height: 1; /* Set line height to 1 for body */
+  line-height: 1; /* Normalize line height */
 }
+
+/* List-specific styles */
 ol,
 ul {
-  list-style: none; /* Remove list styles for ordered and unordered lists */
+  list-style: none; /* Remove default list bullets or numbering */
 }
+
+/* Blockquote and q elements reset */
 blockquote,
 q {
-  quotes: none; /* Remove quotes for blockquotes and q elements */
+  quotes: none; /* Remove quotes around these elements */
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: ""; /* Remove default content for blockquotes and q elements */
-  content: none; /* Ensure no content is displayed */
+  content: ""; /* Remove default pseudo-element content */
+  content: none; /* Ensure no visual quotes appear */
 }
+
+/* Table-specific styles */
 table {
-  border-collapse: collapse; /* Collapse borders for tables */
+  border-collapse: collapse; /* Merge table borders for a clean look */
   border-spacing: 0; /* Remove spacing between table cells */
 }
 

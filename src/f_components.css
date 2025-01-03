@@ -2,6 +2,7 @@
  * <Components>
 */
 
+/* Input fields and similar elements styling */
 input,
 textarea,
 select,
@@ -9,72 +10,85 @@ select,
   accent-color: var(
     --accent,
     var(--theme)
-  ); /* Set accent color for input elements */
+  ); /* Set the accent color, defaulting to theme color */
 }
+
+/* Common styling for form elements */
 select,
 textarea,
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  border: 1px solid #ccc; /* Set border for input elements */
-  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding using spacing variables */
-  border-radius: 0.25rem; /* Set border radius for rounded corners */
-  font-size: 1rem; /* Set font size for input elements */
-  width: 100%; /* Set width to 100% */
-  max-width: 100%; /* Set maximum width to 100% */
+  border: 1px solid #ccc; /* Add a light gray border */
+  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding with fallback values */
+  border-radius: 0.25rem; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+  width: 100%; /* Full width */
+  max-width: 100%; /* Prevent overflow beyond container width */
 }
+
+/* Focus state for form elements */
 select:focus,
 textarea:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-  border-color: var(--accent, var(--theme)); /* Change border color on focus */
-  box-shadow: 0 0 4px var(--accent, var(--theme)); /* Add shadow on focus */
+  border-color: var(--accent, var(--theme)); /* Highlight border on focus */
+  box-shadow: 0 0 4px var(--accent, var(--theme)); /* Add a subtle shadow effect */
 }
+
+/* Button styling */
 .btn {
-  background: var(--btn-bg, var(--theme)); /* Inherit background color */
-  color: var(--fg, inherit); /* Set text color using foreground variable */
-  font-size: 1rem; /* Set font size for buttons */
-  display: inline-block; /* Set display to inline-block */
-  width: auto; /* Set width to auto */
-  text-align: center; /* Center text in button */
-  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding using spacing variables */
-  margin: 4px 3.2px; /* Set margin for buttons */
-  border-radius: 0.25rem; /* Set border radius for rounded corners */
-  border: none; /* Remove border */
-  outline: inherit; /* Inherit outline */
-  cursor: pointer; /* Change cursor to pointer */
-  transition: background border 0.3s ease-in; /* Add transition for background and border */
+  background: var(--btn-bg, var(--theme)); /* Default background color */
+  color: var(--fg, inherit); /* Text color based on foreground variable */
+  font-size: 1rem; /* Standard font size */
+  display: inline-block; /* Make button behave like an inline-block element */
+  width: auto; /* Auto width */
+  text-align: center; /* Center text */
+  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Padding with fallback */
+  margin: 4px 3.2px; /* Small margin */
+  border-radius: 0.25rem; /* Rounded corners */
+  border: none; /* No border */
+  outline: inherit; /* Inherit outline from parent styles */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background border 0.3s ease-in; /* Smooth transition for background and border */
 }
+
+/* Hover state for buttons */
 .btn:hover {
   background: var(
     --btn-bg-hover,
     var(--theme)
   ); /* Change background color on hover */
 }
+
+/* Focus state for buttons */
 .btn:focus {
   background: var(
     --btn-bg,
     var(--theme)
   ); /* Maintain background color on focus */
-  outline: 2px dashed var(--btn-bg, var(--theme)); /* Add dashed outline on focus */
-  outline-offset: 4px; /* Offset outline */
+  outline: 2px dashed var(--btn-bg, var(--theme)); /* Add a dashed outline */
+  outline-offset: 4px; /* Offset the outline slightly */
 }
+
+/* Outline button styling */
 .btn-outline {
-  border: 2px solid var(--btn-bg, var(--theme)); /* Set border for outline button */
-  background: transparent; /* Set background to transparent */
-  color: var(--btn-bg, var(--theme)); /* Set text color for outline button */
+  border: 2px solid var(--btn-bg, var(--theme)); /* Add a border matching the theme color */
+  background: transparent; /* Transparent background */
+  color: var(--btn-bg, var(--theme)); /* Text color matches the border */
 }
+
+/* Hover state for outline buttons */
 .btn-outline:hover {
-  background: var(
-    --btn-bg,
-    var(--theme)
-  ); /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+  background: var(--btn-bg, var(--theme)); /* Fill background on hover */
+  color: #fff; /* Change text color to white */
 }
+
+/* Disabled state for buttons */
 .btn:disabled {
-  cursor: not-allowed; /* Change cursor to not-allowed for disabled buttons */
-  opacity: 0.6; /* Reduce opacity for disabled buttons */
+  cursor: not-allowed; /* Indicate disabled state */
+  opacity: 0.6; /* Reduce visibility to indicate disabled state */
 }
 
 /*
