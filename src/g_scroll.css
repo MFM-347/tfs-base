@@ -6,20 +6,20 @@
 
 /* Define the scrollbar dimensions */
 .scroll::-webkit-scrollbar {
-  width: 12px; /* Width of vertical scrollbar */
-  height: 12px; /* Height of horizontal scrollbar */
+  width: 6px; /* Width of vertical scrollbar */
+  height: 6px; /* Height of horizontal scrollbar */
 }
 
 /* Style the track (background area of the scrollbar) */
 .scroll::-webkit-scrollbar-track {
   background-color: #eee; /* Light gray background for the track */
-  border-radius: 10px; /* Rounded corners for a softer appearance */
+  border-radius: 8px; /* Rounded corners for a softer appearance */
 }
 
 /* Style the scrollbar thumb (the draggable portion) */
 .scroll::-webkit-scrollbar-thumb {
   background-color: #888; /* Medium gray color for better visibility */
-  border-radius: 10px; /* Rounded corners for a consistent design */
+  border-radius: 6px; /* Rounded corners for a consistent design */
 }
 
 /* Change the thumb color on hover for better feedback */

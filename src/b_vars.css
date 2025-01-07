@@ -4,14 +4,14 @@
 
 :root {
   /* Colors */
-  --theme: #5c6bff; /* Universal theme color for consistent branding */
+  --theme: #385cfa; /* Universal theme color */
   --bg: #f0f0f6; /* Background color for light mode */
   --fg: #17171f; /* Foreground color for light mode */
 
   /* Typography */
   --font-normal: system-ui, sans-serif; /* Default font for normal text elements */
-  --font-heading: "Gill Sans", sans-serif; /* Font style for headings */
-  --font-mono: ui-monospace, monospace; /* Monospace font style for code-related elements */
+  --font-heading: "Gill Sans", sans-serif; /* Default font for heading elements */
+  --font-mono: ui-monospace, monospace; /* Default font for mono/code elements */
 
   /* Spacing */
   --space-xs: 4px; /* Extra small spacing for tight layouts */
@@ -21,7 +21,7 @@
 }
 
 .dark {
-  --bg: #121212; /* Background color for dark mode */
+  --bg: #131417; /* Background color for dark mode */
   --fg: #e0e0e0; /* Foreground color for dark mode */
 }
 

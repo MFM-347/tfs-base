@@ -21,8 +21,8 @@ input[type="email"],
 input[type="password"] {
   border: 1px solid #ccc; /* Add a light gray border */
   padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding with fallback values */
-  border-radius: 0.25rem; /* Rounded corners */
-  font-size: 1rem; /* Standard font size */
+  border-radius: 0.375rem; /* Rounded corners */
+  font-size: var(--form-fs, 16px); /* Standard font size */
   width: 100%; /* Full width */
   max-width: 100%; /* Prevent overflow beyond container width */
 }
@@ -40,18 +40,18 @@ input[type="password"]:focus {
 /* Button styling */
 .btn {
   background: var(--btn-bg, var(--theme)); /* Default background color */
-  color: var(--fg, inherit); /* Text color based on foreground variable */
-  font-size: 1rem; /* Standard font size */
+  color: var(--btn-fg, var(--fg)); /* Default text color */
+  font-size: var(--form-fs, 16px); /* Standard font size */
   display: inline-block; /* Make button behave like an inline-block element */
   width: auto; /* Auto width */
   text-align: center; /* Center text */
   padding: var(--space-sm, 8px) var(--space-md, 16px); /* Padding with fallback */
   margin: 4px 3.2px; /* Small margin */
-  border-radius: 0.25rem; /* Rounded corners */
+  border-radius: 0.375rem; /* Rounded corners */
   border: none; /* No border */
   outline: inherit; /* Inherit outline from parent styles */
   cursor: pointer; /* Pointer cursor on hover */
-  transition: background border 0.3s ease-in; /* Smooth transition for background and border */
+  transition: background outline border 0.3s ease-in; /* Smooth transition for background and border */
 }
 
 /* Hover state for buttons */
@@ -69,7 +69,7 @@ input[type="password"]:focus {
     var(--theme)
   ); /* Maintain background color on focus */
   outline: 2px dashed var(--btn-bg, var(--theme)); /* Add a dashed outline */
-  outline-offset: 4px; /* Offset the outline slightly */
+  outline-offset: 2.5px; /* Offset the outline slightly */
 }
 
 /* Outline button styling */
@@ -82,7 +82,7 @@ input[type="password"]:focus {
 /* Hover state for outline buttons */
 .btn-outline:hover {
   background: var(--btn-bg, var(--theme)); /* Fill background on hover */
-  color: #fff; /* Change text color to white */
+  color: var(--btn-text, var(--fg)); /* Change text color to white */
 }
 
 /* Disabled state for buttons */

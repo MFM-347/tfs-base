@@ -88,11 +88,11 @@ If you're using SCSS: 🎨📄✂️
 @import "https://unpkg.com/@tfs-8/basecss";
 ```
 
-## Using Specific Sections of BaseCSS
+## Importing Specific Parts of BaseCSS
 
-Instead of importing the entire compiled CSS file, you can include only the specific sections you need by importing the corresponding files from the `dist` folder. This allows for greater flexibility and reduced file size. 🎯🗂️⚡
+Instead of importing the entire compiled CSS file, you can include only the specific parts you need by importing the corresponding files from the `dist` folder. This allows for greater flexibility and reduced file size. 🎯🗂️⚡
 
-### Available Sections
+### Available Parts
 
 - **vars**: Variables for theming and custom properties.
 - **reset**: Browser style resets.
@@ -101,7 +101,7 @@ Instead of importing the entire compiled CSS file, you can include only the spec
 - **components**: Predefined UI components.
 - **scroll**: Smooth scrolling and scrollbar styling.
 
-### Importing Specific Sections
+### Importing Specific Parts
 
 #### In Plain HTML:
 
