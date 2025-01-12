@@ -1,6 +1,6 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "private": false,
   "type": "commonjs",
   "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
@@ -18,6 +18,8 @@
     "css",
     "html",
     "reset",
+    "base",
+    "normal-css",
     "css3",
     "responsive-design",
     "lightweight-css",

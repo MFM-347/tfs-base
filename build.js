@@ -18,7 +18,7 @@ const filesMap = {
   "d_type.css": "type.css",
   "e_utilities.css": "utilities.css",
   "f_components.css": "components.css",
-  "f_scroll.css": "scroll.css",
+  "g_scroll.css": "scroll.css",
 };
 Object.entries(filesMap).forEach(([srcFileName, destFileName]) => {
   const srcPath = path.join(inDir, srcFileName);

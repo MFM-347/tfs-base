@@ -87,6 +87,7 @@ time,
 mark,
 audio,
 video {
+  box-sizing: border-box;
   margin: 0; /* Reset all margins to zero */
   padding: 0; /* Reset all paddings to zero */
   border: 0; /* Remove all borders */
