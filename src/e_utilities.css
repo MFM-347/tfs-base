@@ -10,6 +10,12 @@ body {
   color: var(--fg); /* Set the text color using the custom variable */
 }
 
+.container {
+  width: clamp(360px, 100%, 1440px);
+  padding: var(--space-sm);
+  margin: 0 auto;
+}
+
 /* Full viewport container styling */
 .bgc {
   background: var(
@@ -26,21 +32,69 @@ body {
   max-height: 100%;
   overflow-x: hidden;
   margin: 0;
-  padding: inherit;
+  padding: var(--space-sm, 6px);
 }
 
-/* Center content using grid layout */
+/* Centering Utilities */
 .center {
-  display: grid; /* Enable grid layout */
-  place-items: center; /* Center items both horizontally and vertically */
+  display: grid;
+  place-items: center;
 }
 
-/* Center content in a column using flexbox */
 .center-col {
-  display: flex; /* Enable flexbox layout */
-  justify-content: center; /* Align items horizontally at the center */
-  align-items: center; /* Align items vertically at the center */
-  flex-direction: column; /* Stack child elements in a column */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Padding and Margin Utilities */
+.p-auto {
+  padding: auto;
+}
+
+.p-1 {
+  padding: var(--space-xs);
+}
+
+.p-2 {
+  padding: var(--space-sm);
+}
+
+.p-3 {
+  padding: var(--space-md);
+}
+
+.p-4 {
+  padding: var(--space-lg);
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.m-1 {
+  margin: var(--space-xs);
+}
+
+.m-2 {
+  margin: var(--space-sm);
+}
+
+.m-3 {
+  margin: var(--space-md);
+}
+
+.m-4 {
+  margin: var(--space-lg);
 }
 
 /*

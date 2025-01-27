@@ -49,13 +49,16 @@ a,
 .text,
 .btn {
   font-family: var(--font-normal); /* Use the normal font variable */
-  font-size: inherit, 18px; /* Inherit font size from parent or default to 16px */
-  margin: inherit; /* Inherit margin from parent */
+  font-size: var(
+    --font-size,
+    18px
+  ); /* get font size from variable or default to 18px */
+  margin: var(--text-margin, 4px);
 }
 
 /* Paragraph-specific styles */
 p {
-  margin-bottom: inherit, 4px; /* Bottom margin for paragraphs */
+  margin-bottom: var(--text-margin, 4px); /* Bottom margin for paragraphs */
 }
 
 /* Heading styles */
@@ -74,89 +77,74 @@ h6,
 .heading,
 .sub-heading {
   font-family: var(--font-heading); /* Use the heading font variable */
-  font-weight: inherit, 700; /* Inherit font weight or default to bold */
+  font-weight: var(
+    --heading-weight,
+    700
+  ); /* get font weight from variable or default to bold */
   line-height: 1.25; /* Set line height for readability */
-  margin-bottom: inherit, 10px; /* Bottom margin for spacing */
+  margin-bottom: var(--heading-margin, 10px); /* Bottom margin for spacing */
 }
 
 /* Responsive font size for h1 */
 h1,
 .h1,
 .heading {
-  font-size: calc(1.425rem + 1.5vw); /* Dynamically adjust size */
-}
-
-/* Specific font size for h1 on large screens */
-@media (min-width: 1200px) {
-  h1,
-  .h1 {
-    font-size: 2.75rem; /* Set a larger size for h1 */
-  }
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3rem); /* Dynamically adjust size */
 }
 
 /* Responsive font size for h2 */
 h2,
 .h2,
 .sub-heading {
-  font-size: calc(1.375rem + 0.9vw); /* Dynamically adjust size */
-}
-
-/* Specific font size for h2 on large screens */
-@media (min-width: 1200px) {
-  h2,
-  .h2 {
-    font-size: 2.25rem; /* Set a larger size for h2 */
-  }
+  font-size: clamp(
+    1.25rem,
+    1.25rem + 1.2vw,
+    2.75rem
+  ); /* Dynamically adjust size */
 }
 
 /* Responsive font size for h3 */
 h3,
 .h3 {
-  font-size: calc(1.325rem + 0.6vw); /* Dynamically adjust size */
-}
-
-/* Specific font size for h3 on large screens */
-@media (min-width: 1200px) {
-  h3,
-  .h3 {
-    font-size: 1.75rem; /* Set a larger size for h3 */
-  }
+  font-size: clamp(1rem, 1rem + 0.9vw, 2.5rem); /* Dynamically adjust size */
 }
 
 /* Responsive font size for h4 */
 h4,
 .h4 {
-  font-size: calc(1.275rem + 0.3vw); /* Dynamically adjust size */
+  font-size: clamp(
+    0.75rem,
+    0.75rem + 0.9vw,
+    2.25rem
+  ); /* Dynamically adjust size */
 }
 
-/* Specific font size for h4 on large screens */
-@media (min-width: 1200px) {
-  h4,
-  .h4 {
-    font-size: 1.5rem; /* Set a larger size for h4 */
-  }
-}
-
-/* Font size for h5 */
+/* Responsive font size for h4 */
 h5,
 .h5 {
-  font-size: 1.25rem; /* Fixed size for h5 */
+  font-size: clamp(
+    0.75rem,
+    0.75rem + 0.6vw,
+    2rem
+  ); /* Dynamically adjust size */
 }
 
-/* Font size for h6 */
+/* Responsive font size for h4 */
 h6,
 .h6 {
-  font-size: 1rem; /* Fixed size for h6 */
+  font-size: clamp(
+    0.75rem,
+    0.75rem + 0.6vw,
+    2rem
+  ); /* Dynamically adjust size */
 }
 
 /* Title-specific styles */
 .title {
-  font-size: calc(1.425rem + 2.1vw); /* Dynamically adjust size */
+  font-size: calc(1.5rem + 2vw); /* Dynamically adjust size */
   font-weight: 800; /* Extra bold for emphasis */
   line-height: 1.2; /* Improve readability */
-  margin:
-    inherit,
-    8px 0; /* Add spacing */
+  margin: var(--title-margin, 12px 0); /* Add spacing */
 }
 
 /* Code and similar elements styles */
