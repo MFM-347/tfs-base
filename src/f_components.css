@@ -2,18 +2,42 @@
  * <Components>
 */
 
-/* Input fields and similar elements styling */
+/* FORM */
 input,
 textarea,
 select,
 .inp {
-  accent-color: var(
-    --accent,
-    var(--theme)
-  ); /* Set the accent color, defaulting to theme color */
+  accent-color: var(--accent, var(--theme));
   transition:
-    border-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+}
+
+/* Normal state */
+select,
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  border: 1px solid #ccc;
+  padding: var(--space-sm, 0.5rem) var(--space-md, 1rem);
+  border-radius: var(--radius);
+  font-size: var(--form-fs, 16px);
+  width: 100%;
+  max-width: 100%;
+  transition:
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+}
+
+/* Focus state */
+select:focus,
+textarea:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus {
+  border-color: var(--accent, var(--theme));
+  box-shadow: 0 0 4px var(--accent, var(--theme));
 }
 
 input::placeholder,
@@ -34,95 +58,71 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/* Common styling for form elements */
-select,
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  border: 1px solid #ccc; /* Add a light gray border */
-  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Add padding with fallback values */
-  border-radius: var(--radius); /* Rounded corners */
-  font-size: var(--form-fs, 16px); /* Standard font size */
-  width: 100%; /* Full width */
-  max-width: 100%; /* Prevent overflow beyond container width */
-  transition:
-    border-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
-}
+/* BUTTONS */
 
-/* Focus state for form elements */
-select:focus,
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: var(--accent, var(--theme)); /* Highlight border on focus */
-  box-shadow: 0 0 4px var(--accent, var(--theme)); /* Add a subtle shadow effect */
-}
-
-/* Button styling */
+/* Base:Normal state */
 .btn {
-  background: var(--btn-bg, var(--theme)); /* Default background color */
-  color: var(--btn-fg, var(--fg)); /* Default text color */
-  font-size: var(--form-fs, 16px); /* Standard font size */
-  display: inline-block; /* Make button behave like an inline-block element */
-  width: max-content; /* Auto width */
-  text-align: center; /* Center text */
-  padding: var(--space-xs, 4px); /* Padding with fallback */
-  margin: 4px 3.2px; /* Small margin */
-  border-radius: var(--radius); /* Rounded corners */
-  border: none; /* No border */
+  background: var(--btn-bg, var(--theme));
+  color: var(--btn-fg, var(--fg));
+  font-size: var(--form-fs, 1rem);
+  display: inline-block;
+  width: max-content;
+  text-align: center;
+  padding: var(--space-xs);
+  margin: 4px 3.2px;
+  border-radius: var(--radius);
+  border: none;
   outline: none;
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background outline border 0.3s ease-in; /* Smooth transition for background and border */
+  cursor: pointer;
+  transition:
+    background 300ms ease-in,
+    outline 300ms ease-in,
+    border 300ms ease-in;
 }
 
-/* Hover state for buttons */
+/* Base:Hover state */
 .btn:hover {
-  background: var(
-    --btn-bg-hover,
-    var(--theme)
-  ); /* Change background color on hover */
+  background: var(--btn-bg-hover, var(--theme));
 }
 
-/* Focus state for buttons */
+/* Base:Focus state */
 .btn:focus,
 .btn:focus-visible {
-  background: var(
-    --btn-bg,
-    var(--theme)
-  ); /* Maintain background color on focus */
-  outline: 2px solid var(--btn-bg, var(--theme)); /* Add an outline */
-  outline-offset: 2.5px; /* Offset the outline slightly */
+  background: var(--btn-bg, var(--theme));
+  outline: 2px solid var(--btn-bg, var(--theme));
+  outline-offset: 2.5px;
 }
 
-/* Outline button styling */
+/* Outline:Normal state */
 .btn-outline {
-  border: 2px solid var(--btn-bg, var(--theme)); /* Add a border matching the theme color */
-  background: transparent; /* Transparent background */
-  color: var(--btn-bg, var(--theme)); /* Text color matches the border */
-  font-size: var(--form-fs, 16px); /* Standard font size */
-  display: inline-block; /* Make button behave like an inline-block element */
-  width: auto; /* Auto width */
-  text-align: center; /* Center text */
-  padding: var(--space-sm, 8px) var(--space-md, 16px); /* Padding with fallback */
-  margin: 4px 3.2px; /* Small margin */
-  border-radius: var(--radius); /* Rounded corners */
-  border: none; /* No border */
-  cursor: pointer; /* Pointer cursor on hover */
+  border: 2px solid var(--btn-bg, var(--theme));
+  background: transparent;
+  color: var(--btn-bg, var(--theme));
+  font-size: var(--form-fs, 16px);
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  margin: 4px 3.2px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background 300ms ease-in,
+    border 300ms ease-in,
+    color 300ms ease-in;
 }
 
-/* Hover state for outline buttons */
+/* Outline:Hover state */
 .btn-outline:hover {
-  background: var(--btn-bg, var(--theme)); /* Fill background on hover */
-  color: var(--btn-text, var(--fg)); /* Change text color to white */
+  background: var(--btn-bg, var(--theme));
+  color: var(--btn-text, var(--fg));
 }
 
-/* Disabled state for buttons */
-.btn:disabled {
-  cursor: not-allowed; /* Indicate disabled state */
-  opacity: 0.75; /* Reduce visibility to indicate disabled state */
+/* Disabled state */
+.btn:disabled,
+.btn-outline:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
 }
 
 /*

@@ -1,10 +1,10 @@
 # BaseCSS
 
-[![Version](https://img.shields.io/npm/v/@tfs-8/basecss.svg)](https://www.npmjs.com/package/@tfs-8/basecss)  
-[![Downloads](https://img.shields.io/npm/dm/@tfs-8/basecss)](https://www.npmjs.com/package/@tfs-8/basecss)  
-[![Number of GitHub contributors](https://img.shields.io/github/contributors/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/graphs/contributors)  
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/)  
-[![Number of GitHub stars](https://img.shields.io/github/stars/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/)  
+[![Version](https://img.shields.io/npm/v/@tfs-8/basecss.svg)](https://www.npmjs.com/package/@tfs-8/basecss)
+[![Downloads](https://img.shields.io/npm/dm/@tfs-8/basecss)](https://www.npmjs.com/package/@tfs-8/basecss)
+[![Number of GitHub contributors](https://img.shields.io/github/contributors/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/graphs/contributors)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/)
+[![Number of GitHub stars](https://img.shields.io/github/stars/MFM-347/BaseCSS)](https://github.com/MFM-347/BaseCSS/)
 [![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/MFM-347/BaseCSS/blob/main/LICENSE)
 
 BaseCSS is a minimal and flexible CSS library designed for fast, responsive, and maintainable web development. Ideal for developers looking for simplicity and scalability. 🌍💻
@@ -40,7 +40,7 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import "@tfs-8/basecss";
+import '@tfs-8/basecss'
 ```
 
 #### In SCSS:
@@ -48,7 +48,7 @@ import "@tfs-8/basecss";
 If you're using SCSS:
 
 ```scss
-@import "node_modules/@tfs-8/basecss";
+@import 'node_modules/@tfs-8/basecss';
 ```
 
 ## Using BaseCSS via CDN
@@ -76,7 +76,7 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import "https://unpkg.com/@tfs-8/basecss";
+import 'https://unpkg.com/@tfs-8/basecss'
 ```
 
 #### In SCSS:
@@ -84,7 +84,7 @@ import "https://unpkg.com/@tfs-8/basecss";
 If you're using SCSS:
 
 ```scss
-@import "https://unpkg.com/@tfs-8/basecss";
+@import 'https://unpkg.com/@tfs-8/basecss';
 ```
 
 ## Importing Specific Parts of BaseCSS 🔧
@@ -115,7 +115,7 @@ Link the desired CSS file in your `<head>` tag:
 Import the specific section in your entry file:
 
 ```javascript
-import "@tfs-8/basecss/dist/type.min.css";
+import '@tfs-8/basecss/dist/type.min.css'
 ```
 
 #### In SCSS:
@@ -123,7 +123,7 @@ import "@tfs-8/basecss/dist/type.min.css";
 If you're using SCSS:
 
 ```scss
-@import "node_modules/@tfs-8/basecss/dist/utilities.min.css";
+@import 'node_modules/@tfs-8/basecss/dist/utilities.min.css';
 ```
 
 ## Getting Started 🚀

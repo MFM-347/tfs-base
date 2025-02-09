@@ -33,7 +33,7 @@ abbr,
 samp,
 kbd,
 var {
-  color: var(--fg); /* Set text color using the foreground variable */
+  color: var(--fg);
 }
 
 /* Base font styles for general elements */
@@ -48,17 +48,14 @@ button,
 a,
 .text,
 .btn {
-  font-family: var(--font-normal); /* Use the normal font variable */
-  font-size: var(
-    --font-size,
-    18px
-  ); /* get font size from variable or default to 18px */
+  font-family: var(--font-normal);
+  font-size: var(--font-size, 18px);
   margin: var(--text-margin, 4px);
 }
 
 /* Paragraph-specific styles */
 p {
-  margin-bottom: var(--text-margin, 4px); /* Bottom margin for paragraphs */
+  margin-bottom: var(--text-margin, 4px);
 }
 
 /* Heading styles */
@@ -76,75 +73,56 @@ h6,
 .h6,
 .heading,
 .sub-heading {
-  font-family: var(--font-heading); /* Use the heading font variable */
-  font-weight: var(
-    --heading-weight,
-    700
-  ); /* get font weight from variable or default to bold */
-  line-height: 1.25; /* Set line height for readability */
-  margin-bottom: var(--heading-margin, 10px); /* Bottom margin for spacing */
+  font-family: var(--font-heading);
+  font-weight: var(--heading-weight, 700);
+  line-height: 1.25;
+  margin-bottom: var(--heading-margin, 10px);
 }
 
 /* Responsive font size for h1 */
 h1,
 .h1,
 .heading {
-  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3rem); /* Dynamically adjust size */
+  font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3rem);
 }
 
 /* Responsive font size for h2 */
 h2,
 .h2,
 .sub-heading {
-  font-size: clamp(
-    1.25rem,
-    1.25rem + 1.2vw,
-    2.75rem
-  ); /* Dynamically adjust size */
+  font-size: clamp(1.25rem, 1.25rem + 1.2vw, 2.75rem);
 }
 
 /* Responsive font size for h3 */
 h3,
 .h3 {
-  font-size: clamp(1rem, 1rem + 0.9vw, 2.5rem); /* Dynamically adjust size */
+  font-size: clamp(1rem, 1rem + 0.9vw, 2.5rem);
 }
 
 /* Responsive font size for h4 */
 h4,
 .h4 {
-  font-size: clamp(
-    0.75rem,
-    0.75rem + 0.9vw,
-    2.25rem
-  ); /* Dynamically adjust size */
+  font-size: clamp(0.75rem, 0.75rem + 0.9vw, 2.25rem);
 }
 
 /* Responsive font size for h4 */
 h5,
 .h5 {
-  font-size: clamp(
-    0.75rem,
-    0.75rem + 0.6vw,
-    2rem
-  ); /* Dynamically adjust size */
+  font-size: clamp(0.75rem, 0.75rem + 0.6vw, 2rem);
 }
 
 /* Responsive font size for h4 */
 h6,
 .h6 {
-  font-size: clamp(
-    0.75rem,
-    0.75rem + 0.6vw,
-    2rem
-  ); /* Dynamically adjust size */
+  font-size: clamp(0.75rem, 0.75rem + 0.6vw, 2rem);
 }
 
 /* Title-specific styles */
 .title {
-  font-size: calc(1.5rem + 2vw); /* Dynamically adjust size */
-  font-weight: 800; /* Extra bold for emphasis */
-  line-height: 1.2; /* Improve readability */
-  margin: var(--title-margin, 12px 0); /* Add spacing */
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: var(--title-margin, 12px 0);
 }
 
 /* Code and similar elements styles */
@@ -153,8 +131,8 @@ abbr,
 samp,
 kbd,
 var {
-  font-family: var(--font-mono); /* Use monospaced font for code elements */
-  padding: 2px 5px; /* Add padding for better appearance */
+  font-family: var(--font-mono);
+  padding: 0.125rem 0.3125rem;
 }
 
 /*

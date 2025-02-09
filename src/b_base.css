@@ -1,0 +1,49 @@
+/*
+ * <Variables>
+*/
+
+:root {
+  /* Base font family */
+  font-family: var(--font-normal);
+
+  /* Theme Colors */
+  --accent: #385cfa;
+  --success: #5cfa38;
+  --warning: #fad638;
+  --danger: #fa385c;
+  --bg: #f0f0f6;
+  --fg: #17171f;
+
+  /* Font Families */
+  --font-normal: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Open Sans', 'Arial', sans-serif;
+  --font-heading: 'Gill Sans', sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Spacing & Layout */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --radius: 0.375rem;
+}
+
+.dark {
+  --bg: #131417;
+  --fg: #e0e0e0;
+}
+
+.dark,
+:root {
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--btn-bg, var(--theme));
+  outline-offset: 2.5px;
+}
+
+/*
+ * </Variables>
+*/
