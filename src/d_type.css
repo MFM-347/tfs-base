@@ -102,7 +102,7 @@ h3,
 /* Responsive font size for h4 */
 h4,
 .h4 {
-  font-size: clamp(0.75rem, 0.75rem + 0.9vw, 2.25rem);
+  font-size: clamp(0.85rem, 0.85rem + 0.9vw, 2.25rem);
 }
 
 /* Responsive font size for h4 */
@@ -114,12 +114,12 @@ h5,
 /* Responsive font size for h4 */
 h6,
 .h6 {
-  font-size: clamp(0.75rem, 0.75rem + 0.6vw, 2rem);
+  font-size: clamp(0.65rem, 0.65rem + 0.6vw, 1.75rem);
 }
 
 /* Title-specific styles */
 .title {
-  font-size: calc(1.5rem + 2vw);
+  font-size: calc(1.625rem + 2vw);
   font-weight: 800;
   line-height: 1.2;
   margin: var(--title-margin, 12px 0);
@@ -130,7 +130,8 @@ code,
 abbr,
 samp,
 kbd,
-var {
+var,
+pre {
   font-family: var(--font-mono);
   padding: 0.125rem 0.3125rem;
 }

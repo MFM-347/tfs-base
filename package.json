@@ -1,6 +1,6 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "1.0.1",
+  "version": "1.0.2-beta",
   "private": false,
   "type": "commonjs",
   "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
@@ -10,10 +10,9 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "node build.js && npm run minify",
-    "preminify": "prettier -w .",
-    "minify": "find dist -name '*.css' ! -name '*.min.css' -exec sh -c 'npx clean-css-cli \"$1\" -o \"${1%.css}.min.css\"' _ {} \\;",
-    "lint": "stylelint **/*.css"
+    "build": "npm run format && node build.js",
+    "prepublishOnly": "npm run build",
+    "format": "prettier -w ."
   },
   "keywords": [
     "css",
@@ -48,9 +47,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "clean-css-cli": "^5.6.3",
-    "prettier": "^3.4.2",
-    "stylelint": "^16.14.1",
-    "stylelint-config-standard": "^37.0.0"
+    "lightningcss": "^1.29.1",
+    "prettier": "^3.4.2"
   }
 }
