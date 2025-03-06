@@ -1,6 +1,6 @@
 name: Question
 description: Ask a question related to this project.
-labels: question
+labels: [question, help]
 body:
   - type: markdown
     attributes:

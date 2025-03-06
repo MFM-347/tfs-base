@@ -1,6 +1,6 @@
 name: Bug Report
 description: Report a bug or an issue with this project.
-labels: bug
+labels: [bug, error]
 body:
   - type: markdown
     attributes:
