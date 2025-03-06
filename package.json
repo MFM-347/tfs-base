@@ -1,6 +1,6 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "1.0.2-beta",
+  "version": "1.0.2",
   "private": false,
   "type": "commonjs",
   "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "npm run format && node build.js",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build && npm uninstall prettier @nirtamir2/prettier-plugin-css-order",
+    "postpublishOnly": "npm i prettier@latest @nirtamir2/prettier-plugin-css-order -D",
     "format": "prettier -w ."
   },
   "keywords": [
@@ -42,12 +43,12 @@
   },
   "author": {
     "name": "Farhan Madni",
-    "url": "https://github.com/mfm-347",
-    "email": "madnifm347@outlook.com"
+    "url": "https://xyzdev.vercel.app"
   },
-  "license": "MIT",
   "devDependencies": {
-    "lightningcss": "^1.29.1",
-    "prettier": "^3.4.2"
-  }
+    "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
+    "lightningcss": "^1.29.2",
+    "prettier": "^3.5.3"
+  },
+  "license": "MIT"
 }

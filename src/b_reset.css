@@ -1,6 +1,12 @@
 /*
- * modern-normalize v3.0.1 | MIT License
- * https://github.com/sindresorhus/modern-normalize/
+ * <Reset
+ *  src="{
+ *    name: modern-normalize,
+ *    version: v3.0.1,
+ *    License: MIT License,
+ *    url: https://github.com/sindresorhus/modern-normalize/
+ *  }
+ * >
 */
 
 /* Document */
@@ -24,15 +30,15 @@ body {
 /* Typography */
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 code,
 kbd,
 samp,
 pre {
-  font-family: var(--font-mono);
   font-size: 1rem;
+  font-family: var(--font-mono);
 }
 
 small {
@@ -42,9 +48,9 @@ small {
 /* Subscript/Superscript */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -67,17 +73,17 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
   margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: 1.15;
 }
 
 /* iOS/Safari Compatibility */
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   appearance: auto;
 }
 
@@ -94,9 +100,9 @@ progress {
   height: auto;
 }
 
-[type='search'] {
-  appearance: textfield;
+[type="search"] {
   outline-offset: -2px;
+  appearance: textfield;
 }
 
 ::-webkit-search-decoration {
@@ -104,11 +110,15 @@ progress {
 }
 
 ::-webkit-file-upload-button {
-  appearance: auto;
   font: inherit;
+  appearance: auto;
 }
 
 /* Interactive Elements */
 summary {
   display: list-item;
 }
+
+/*
+  * </Reset>
+ */

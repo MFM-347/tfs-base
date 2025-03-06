@@ -1,64 +1,109 @@
-const fs = require('fs')
-const path = require('path')
-const { transform, Features } = require('lightningcss')
+const fs = require("fs")
+const path = require("path")
+const { transform, Features } = require("lightningcss")
 
-console.log('\nBuilding...')
-const inDir = './src'
-const outDir = './dist'
-
-const meta =
-  '/*\n* @tfs-8/basecss v1.0.2-beta\n* MIT Licensed <https://opensource.org/license/MIT>\n* Source Code: Github <https://github.com/MFM-347/BaseCSS>\n*/\n\n'
-if (!fs.existsSync(outDir)) {
-  fs.mkdirSync(outDir)
-}
-const files = fs.readdirSync(inDir).filter((file) => file.endsWith('.css'))
-const c = files.map((file) => fs.readFileSync(path.join(inDir, file), 'utf8')).join('\n')
-const compiled = transform({
-  filename: 'base.css',
-  code: Buffer.from(c),
-  minify: false,
-  include: Features.Colors | Features.Nesting,
-  exclude: Features.VendorPrefixes,
-}).code
-fs.writeFileSync(path.join(outDir, 'base.css'), meta + compiled)
-console.log('Compiled base.css')
-const minified = transform({
-  filename: 'base.css',
-  code: Buffer.from(compiled),
-  minify: true,
-  include: Features.Colors | Features.Nesting,
-  exclude: Features.VendorPrefixes,
-}).code
-fs.writeFileSync(path.join(outDir, 'base.min.css'), meta + minified)
-console.log('Minified base.css to base.min.css')
-
-const filesMap = {
-  'b_vars.css': 'vars.min.css',
-  'c_reset.css': 'reset.min.css',
-  'd_type.css': 'type.min.css',
-  'e_utilities.css': 'utilities.min.css',
-  'f_components.css': 'components.min.css',
-  'g_scroll.css': 'scroll.min.css',
+// Configuration
+const CONFIG = {
+  INPUT_DIR: "./src",
+  OUTPUT_DIR: "./dist",
+  META_INFO: `/*
+* @tfs-8/basecss v1.0.2
+* MIT Licensed <https://opensource.org/license/MIT>
+* Source Code on Github <https://github.com/MFM-347/BaseCSS>
+*/\n\n`,
+  FILES_MAP: {
+    "a_vars.css": "vars.min.css",
+    "b_reset.css": "reset.min.css",
+    "c_type.css": "type.min.css",
+    "d_utilities.css": "utilities.min.css",
+    "e_components.css": "components.min.css",
+    "f_scroll.css": "scroll.min.css",
+  },
 }
 
-Object.entries(filesMap).forEach(([inputName, outputName]) => {
-  const src = path.join(inDir, inputName)
-  const dist = path.join(outDir, outputName)
-
-  if (fs.existsSync(src)) {
-    const css = fs.readFileSync(src, 'utf8')
-    const minified = transform({
-      filename: outputName,
-      code: Buffer.from(css),
-      minify: true,
-      include: Features.Colors | Features.Nesting,
-      exclude: Features.VendorPrefixes,
-    }).code
-    fs.writeFileSync(dist, minified)
-    console.log(`Minified ${outputName}`)
-  } else {
-    console.error(`Warning: ${inputName} not found in ${inDir}`)
+// Utility Functions
+function ensureDirectoryExists(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
   }
-})
+}
 
-console.log('\nSuccessful compilation, minification, and file copying.')
+function readFilesFromDirectory(dir, extension) {
+  return fs.readdirSync(dir).filter((file) => file.endsWith(extension))
+}
+
+function compileCSS(filename, code, minify = false) {
+  return transform({
+    filename,
+    code: Buffer.from(code),
+    minify,
+    include: Features.Colors | Features.Nesting,
+    exclude: Features.VendorPrefixes,
+  }).code
+}
+
+function writeFileWithMeta(filePath, content, meta = "") {
+  fs.writeFileSync(filePath, meta + content)
+}
+
+function logFileSize(label, filePath, originalSize, fileSizes) {
+  const size = fs.statSync(filePath).size
+  fileSizes.push({
+    File: label,
+    "Original Size (bytes)": originalSize,
+    "Minified Size (bytes)": size,
+  })
+}
+
+// Main Build Process
+function buildCSS() {
+  console.log("\nBuilding...")
+
+  ensureDirectoryExists(CONFIG.OUTPUT_DIR)
+
+  const fileSizes = []
+  const cssFiles = readFilesFromDirectory(CONFIG.INPUT_DIR, ".css")
+
+  // Combine and compile all CSS files into base.css
+  const combinedCSS = cssFiles
+    .map((file) => fs.readFileSync(path.join(CONFIG.INPUT_DIR, file), "utf8"))
+    .join("\n")
+
+  const compiledCSS = compileCSS("base.css", combinedCSS)
+  const baseCSSPath = path.join(CONFIG.OUTPUT_DIR, "base.css")
+  writeFileWithMeta(baseCSSPath, compiledCSS, CONFIG.META_INFO)
+  logFileSize("base.css", baseCSSPath, Buffer.byteLength(combinedCSS), fileSizes)
+  console.log("Compiled base.css")
+
+  // Minify base.css into base.min.css
+  const minifiedCSS = compileCSS("base.css", compiledCSS, true)
+  const minBaseCSSPath = path.join(CONFIG.OUTPUT_DIR, "base.min.css")
+  writeFileWithMeta(minBaseCSSPath, minifiedCSS, CONFIG.META_INFO)
+  logFileSize("base.min.css", minBaseCSSPath, Buffer.byteLength(compiledCSS), fileSizes)
+  console.log("Minified base.css to base.min.css")
+
+  // Process individual files
+  Object.entries(CONFIG.FILES_MAP).forEach(([inputName, outputName]) => {
+    const srcPath = path.join(CONFIG.INPUT_DIR, inputName)
+    const outPath = path.join(CONFIG.OUTPUT_DIR, outputName)
+
+    if (!fs.existsSync(srcPath)) {
+      console.error(`Warning: ${inputName} not found in ${CONFIG.INPUT_DIR}`)
+      return
+    }
+
+    const cssContent = fs.readFileSync(srcPath, "utf8")
+    const minified = compileCSS(outputName, cssContent, true)
+    fs.writeFileSync(outPath, minified)
+    logFileSize(outputName, outPath, Buffer.byteLength(cssContent), fileSizes)
+    console.log(`Minified ${outputName}`)
+  })
+
+  // Log build summary
+  console.log("\nBuild Summary:")
+  console.table(fileSizes)
+  console.log("\nSuccessful compilation, minification, and file copying.")
+}
+
+// Run the build process
+buildCSS()

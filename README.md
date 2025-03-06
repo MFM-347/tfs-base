@@ -40,7 +40,7 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import '@tfs-8/basecss'
+import "@tfs-8/basecss"
 ```
 
 #### In SCSS:
@@ -48,7 +48,7 @@ import '@tfs-8/basecss'
 If you're using SCSS:
 
 ```scss
-@import 'node_modules/@tfs-8/basecss';
+@import "node_modules/@tfs-8/basecss";
 ```
 
 ## Using BaseCSS via CDN
@@ -76,7 +76,7 @@ Link the CSS file in your `<head>` tag:
 Import the CSS in your entry file:
 
 ```javascript
-import 'https://unpkg.com/@tfs-8/basecss'
+import "https://unpkg.com/@tfs-8/basecss"
 ```
 
 #### In SCSS:
@@ -84,7 +84,7 @@ import 'https://unpkg.com/@tfs-8/basecss'
 If you're using SCSS:
 
 ```scss
-@import 'https://unpkg.com/@tfs-8/basecss';
+@import "https://unpkg.com/@tfs-8/basecss";
 ```
 
 ## Importing Specific Parts of BaseCSS 🔧
@@ -115,7 +115,7 @@ Link the desired CSS file in your `<head>` tag:
 Import the specific section in your entry file:
 
 ```javascript
-import '@tfs-8/basecss/dist/type.min.css'
+import "@tfs-8/basecss/dist/type.min.css"
 ```
 
 #### In SCSS:
@@ -123,7 +123,7 @@ import '@tfs-8/basecss/dist/type.min.css'
 If you're using SCSS:
 
 ```scss
-@import 'node_modules/@tfs-8/basecss/dist/utilities.min.css';
+@import "node_modules/@tfs-8/basecss/dist/utilities.min.css";
 ```
 
 ## Getting Started 🚀

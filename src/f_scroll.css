@@ -1,0 +1,43 @@
+/*
+ * <Scroll>
+*/
+
+/* CHROME AND OTHER WEBKIT BROWSERS */
+html::-webkit-scrollbar,
+.sc::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+html::-webkit-scrollbar-track,
+.sc::-webkit-scrollbar-track {
+  background-color: var(--sc-bg);
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-thumb,
+.sc::-webkit-scrollbar-thumb {
+  background-color: var(--sc-fg);
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+.sc::-webkit-scrollbar-thumb:hover {
+  background-color: var(--sc-hover-fg);
+}
+
+html::-webkit-scrollbar-corner,
+.sc::-webkit-scrollbar-corner {
+  background-color: var(--sc-fg);
+}
+
+/* FIREFOX */
+html,
+.sc {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sc-fg) var(--sc-bg);
+}
+
+/*
+ * </Scroll>
+*/

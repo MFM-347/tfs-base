@@ -4,27 +4,18 @@
 
 /* Body styling */
 .container {
-  width: clamp(180px, 100%, 1440px);
-  padding: var(--space-sm);
-  margin: 0 auto;
-}
-
-/* Full viewport container styling */
-.bgc {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: clamp(180px, 95vw, 1440px);
+  margin-inline: auto;
+  padding-inline: 2rem;
 }
 
 /* size full */
 .sf {
+  margin: 0;
   min-width: 100%;
   max-height: 100%;
-  overflow-x: hidden;
-  margin: 0;
   padding: var(--space-sm);
+  overflow-x: hidden;
 }
 
 /* Centering Utilities */
@@ -35,9 +26,9 @@
 
 .center-col {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Padding and Margin Utilities */
