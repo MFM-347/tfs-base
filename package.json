@@ -1,9 +1,9 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "type": "commonjs",
-  "description": "BaseCSS is a lightweight css library designed to simplify responsive and scalable web design.",
+  "description": "A lightweight css library designed to simplify responsive and scalable web design.",
   "main": "dist/base.min.css",
   "style": "dist/base.min.css",
   "files": [
@@ -12,8 +12,8 @@
   "scripts": {
     "build": "npm run format && node build.js",
     "prepublishOnly": "npm run build && npm uninstall prettier @nirtamir2/prettier-plugin-css-order",
-    "postpublishOnly": "npm i prettier@latest @nirtamir2/prettier-plugin-css-order -D",
-    "format": "prettier -w ."
+    "postpublish": "npm i prettier@latest @nirtamir2/prettier-plugin-css-order -D",
+    "format": "prettier -w . && clear"
   },
   "keywords": [
     "css",

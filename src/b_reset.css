@@ -22,7 +22,6 @@ html {
   tab-size: 4;
 }
 
-/* Sections */
 body {
   margin: 0;
 }
@@ -38,7 +37,6 @@ kbd,
 samp,
 pre {
   font-size: 1rem;
-  font-family: var(--font-mono);
 }
 
 small {
@@ -64,7 +62,7 @@ sup {
 
 /* Tables */
 table {
-  border-color: currentcolor;
+  border-color: currentColor;
 }
 
 /* Forms */
@@ -79,7 +77,6 @@ textarea {
   line-height: 1.15;
 }
 
-/* iOS/Safari Compatibility */
 button,
 [type="button"],
 [type="reset"],

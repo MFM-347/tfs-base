@@ -3,10 +3,13 @@
 */
 
 /* FORM */
-:is(input, textarea, select) {
+:is(input, button, textarea, select) {
   transition:
-    border-color 200ms ease-in-out,
-    box-shadow 200ms ease-in-out;
+    color 175ms ease-in-out,
+    outline 175ms ease-in-out,
+    background-color 175ms ease-in-out,
+    border 175ms ease-in-out,
+    box-shadow 175ms ease-in-out;
   accent-color: var(--accent);
 }
 
@@ -103,10 +106,6 @@ textarea:disabled {
   border: 2px solid var(--btn-bg, var(--accent));
   border-radius: var(--radius);
   cursor: pointer;
-  transition:
-    background 300ms ease-in,
-    border 300ms ease-in,
-    color 300ms ease-in;
 }
 
 /* Outline:Hover state */

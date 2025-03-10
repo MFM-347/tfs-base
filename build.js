@@ -37,7 +37,7 @@ function compileCSS(filename, code, minify = false) {
     filename,
     code: Buffer.from(code),
     minify,
-    include: Features.Colors | Features.Nesting,
+    include: Features.Colors | Features.FontFamilySystemUi | Features.ColorFunction,
     exclude: Features.VendorPrefixes,
   }).code
 }
@@ -64,22 +64,20 @@ function buildCSS() {
   const fileSizes = []
   const cssFiles = readFilesFromDirectory(CONFIG.INPUT_DIR, ".css")
 
-  // Combine and compile all CSS files into base.css
   const combinedCSS = cssFiles
     .map((file) => fs.readFileSync(path.join(CONFIG.INPUT_DIR, file), "utf8"))
     .join("\n")
 
-  const compiledCSS = compileCSS("base.css", combinedCSS)
   const baseCSSPath = path.join(CONFIG.OUTPUT_DIR, "base.css")
-  writeFileWithMeta(baseCSSPath, compiledCSS, CONFIG.META_INFO)
+  writeFileWithMeta(baseCSSPath, combinedCSS, CONFIG.META_INFO)
   logFileSize("base.css", baseCSSPath, Buffer.byteLength(combinedCSS), fileSizes)
-  console.log("Compiled base.css")
+  console.log("Created base.css")
 
   // Minify base.css into base.min.css
-  const minifiedCSS = compileCSS("base.css", compiledCSS, true)
+  const minifiedCSS = compileCSS("base.min.css", combinedCSS, true)
   const minBaseCSSPath = path.join(CONFIG.OUTPUT_DIR, "base.min.css")
   writeFileWithMeta(minBaseCSSPath, minifiedCSS, CONFIG.META_INFO)
-  logFileSize("base.min.css", minBaseCSSPath, Buffer.byteLength(compiledCSS), fileSizes)
+  logFileSize("base.min.css", minBaseCSSPath, Buffer.byteLength(combinedCSS), fileSizes)
   console.log("Minified base.css to base.min.css")
 
   // Process individual files
