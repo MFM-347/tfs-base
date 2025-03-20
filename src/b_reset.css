@@ -24,6 +24,8 @@ html {
 
 body {
   margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 /* Typography */
@@ -36,6 +38,7 @@ code,
 kbd,
 samp,
 pre {
+  color: var(--color-code);
   font-size: 1rem;
 }
 
@@ -80,7 +83,11 @@ textarea {
 button,
 [type="button"],
 [type="reset"],
-[type="submit"] {
+[type="submit"],
+.btn,
+a.btn {
+  line-height: normal;
+  text-decoration: none;
   appearance: auto;
 }
 

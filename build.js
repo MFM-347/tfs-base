@@ -7,7 +7,7 @@ const CONFIG = {
   INPUT_DIR: "./src",
   OUTPUT_DIR: "./dist",
   META_INFO: `/*
-* @tfs-8/basecss v1.0.2
+* @tfs-8/basecss v1.2.0-beta
 * MIT Licensed <https://opensource.org/license/MIT>
 * Source Code on Github <https://github.com/MFM-347/BaseCSS>
 */\n\n`,
@@ -37,7 +37,7 @@ function compileCSS(filename, code, minify = false) {
     filename,
     code: Buffer.from(code),
     minify,
-    include: Features.Colors | Features.FontFamilySystemUi | Features.ColorFunction,
+    include: Features.Colors | Features.ColorFunction,
     exclude: Features.VendorPrefixes,
   }).code
 }
@@ -67,9 +67,9 @@ function buildCSS() {
   const combinedCSS = cssFiles
     .map((file) => fs.readFileSync(path.join(CONFIG.INPUT_DIR, file), "utf8"))
     .join("\n")
-
+  const x = compileCSS("base.min.css", combinedCSS)
   const baseCSSPath = path.join(CONFIG.OUTPUT_DIR, "base.css")
-  writeFileWithMeta(baseCSSPath, combinedCSS, CONFIG.META_INFO)
+  writeFileWithMeta(baseCSSPath, x, CONFIG.META_INFO)
   logFileSize("base.css", baseCSSPath, Buffer.byteLength(combinedCSS), fileSizes)
   console.log("Created base.css")
 

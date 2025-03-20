@@ -1,6 +1,6 @@
 {
   "name": "@tfs-8/basecss",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "private": false,
   "type": "commonjs",
   "description": "A lightweight css library designed to simplify responsive and scalable web design.",
@@ -11,8 +11,7 @@
   ],
   "scripts": {
     "build": "npm run format && node build.js",
-    "prepublishOnly": "npm run build && npm uninstall prettier @nirtamir2/prettier-plugin-css-order",
-    "postpublish": "npm i prettier@latest @nirtamir2/prettier-plugin-css-order -D",
+    "prepublishOnly": "npm run build",
     "format": "prettier -w . && clear"
   },
   "keywords": [
@@ -20,14 +19,11 @@
     "html",
     "web",
     "ui",
-    "library",
     "basecss",
     "reset",
     "base",
-    "normal-css",
     "css3",
     "responsive-design",
-    "lightweight-css",
     "minimal-css",
     "frontend",
     "web-design",
@@ -47,7 +43,7 @@
   },
   "devDependencies": {
     "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
-    "lightningcss": "^1.29.2",
+    "lightningcss": "^1.29.3",
     "prettier": "^3.5.3"
   },
   "license": "MIT"
