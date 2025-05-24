@@ -1,6 +1,6 @@
 {
-  "name": "@tfs-8/basecss",
-  "version": "1.2.0",
+  "name": "tfs-base",
+  "version": "9.9.8",
   "private": false,
   "type": "commonjs",
   "description": "A lightweight css library designed to simplify responsive and scalable web design.",
@@ -10,9 +10,11 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "npm run format && node build.js",
+    "build": "npm run build:css && npm run build:min",
+    "build:css": "postcss src/main.css -o dist/base.css --env development",
+    "build:min": "postcss src/main.css -o dist/base.min.css --env cssnano",
     "prepublishOnly": "npm run build",
-    "format": "prettier -w . && clear"
+    "format": "prettier -w src"
   },
   "keywords": [
     "css",
@@ -32,19 +34,27 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MFM-347/BaseCSS.git"
+    "url": "git+https://github.com/MFM-347/tfs-base.git"
   },
   "bugs": {
-    "url": "https://github.com/MFM-347/BaseCSS/issues"
+    "url": "https://github.com/MFM-347/tfs-base/issues"
   },
   "author": {
     "name": "Farhan Madni",
-    "url": "https://xyzdev.vercel.app"
+    "url": "https://x.com/mfm-347"
   },
   "devDependencies": {
     "@nirtamir2/prettier-plugin-css-order": "^0.0.1",
-    "lightningcss": "^1.29.3",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^7.0.2",
     "prettier": "^3.5.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "postcss-preset-env": "^10.1.6"
+  }
 }

@@ -1,22 +1,15 @@
-/*
- * <Components>
-*/
-
-/* Semantic Elements */
 aside {
   float: right;
   width: 30%;
   padding: 0 15px;
   font-size: 1rem;
   margin-inline-start: 10px;
-}
 
-*[dir="rtl"] aside {
-  float: left;
-}
+  *[dir="rtl"] & {
+    float: left;
+  }
 
-@media only screen and (max-width: 720px) {
-  aside {
+  @media (--md) {
     float: none;
     width: 100%;
     margin-inline-start: 2.5px;
@@ -39,7 +32,6 @@ footer {
   border-top: 1px solid var(--color-text);
 }
 
-/* Form Elements */
 :is(input, button, textarea, select) {
   transition:
     color 175ms ease-in-out,
@@ -55,11 +47,10 @@ input[type="radio"] {
   position: relative;
   width: min-content;
   vertical-align: middle;
-}
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: inline-block;
+  + label {
+    display: inline-block;
+  }
 }
 
 input[type="radio"] {
@@ -112,30 +103,24 @@ input[type="password"] {
   transition:
     border-color 200ms ease-in-out,
     box-shadow 200ms ease-in-out;
-}
 
-select:focus,
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 4px var(--color-accent);
-}
+  &:focus {
+    border-color: var(--color-accent);
+    outline-offset: 2.5px;
+    box-shadow: 0 0 4px var(--color-accent);
+  }
 
-input::placeholder,
-textarea::placeholder {
-  color: var(--fg);
-  opacity: 0.7;
+  &::placeholder {
+    color: var(--fg);
+    opacity: 0.7;
+  }
 }
 
 input:focus-visible,
 textarea:focus-visible {
   outline: 1.5px solid var(--color-accent);
-  outline-offset: 2.5px;
 }
 
-/* Buttons */
 button,
 [type="button"],
 [type="reset"],
@@ -158,33 +143,21 @@ a.btn {
     background 200ms ease-in,
     outline 200ms ease-in,
     border 200ms ease-in;
-}
 
-button:hover,
-[type="button"]:hover,
-[type="reset"]:hover,
-[type="submit"]:hover,
-.btn:hover,
-a.btn:hover {
-  background: var(--btn-bg-hover, var(--color-accent-hover));
-}
+  &:hover {
+    background: var(--btn-bg-hover, var(--color-accent-hover));
+  }
 
-button:focus,
-[type="button"]:focus,
-[type="reset"]:focus,
-[type="submit"]:focus,
-a.btn:focus,
-.btn:focus {
-  background: var(--btn-bg, var(--color-accent));
-  outline: 1.25px solid var(--btn-bg, var(--color-accent));
-  outline-offset: 1.75px;
-}
+  &:focus {
+    background: var(--btn-bg, var(--color-accent));
+    outline: 1.25px solid var(--btn-bg, var(--color-accent));
+    outline-offset: 1.75px;
+  }
 
-.btn:focus-visible,
-button:focus-visible:where(:enabled),
-input:enabled:focus-visible:where([type="submit"], [type="reset"], [type="button"]) {
-  outline: 1.25px solid var(--btn-bg, var(--color-accent));
-  outline-offset: 1.75px;
+  &:focus-visible {
+    outline: 1.25px solid var(--btn-bg, var(--color-accent));
+    outline-offset: 1.75px;
+  }
 }
 
 .btn-outline {
@@ -199,11 +172,11 @@ input:enabled:focus-visible:where([type="submit"], [type="reset"], [type="button
   border: 2px solid var(--btn-bg, var(--color-accent));
   border-radius: var(--radius);
   cursor: pointer;
-}
 
-.btn-outline:hover {
-  color: var(--btn-text, var(--fg));
-  background: var(--btn-bg, var(--color-accent));
+  &:hover {
+    color: var(--btn-text, var(--fg));
+    background: var(--btn-bg, var(--color-accent));
+  }
 }
 
 .button[aria-disabled="true"],
@@ -214,7 +187,3 @@ button[disabled] {
   cursor: not-allowed;
   opacity: 0.8;
 }
-
-/*
- * </Components>
-*/

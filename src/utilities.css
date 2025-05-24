@@ -1,15 +1,29 @@
-/*
- * <Utilities>
-*/
-
-/* Body styling */
 .container {
-  width: clamp(180px, 95vw, 1440px);
+  width: 100%;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
+
+  @media (--sm) {
+    max-width: 640px;
+    padding-inline: 1.25rem;
+  }
+
+  @media (--md) {
+    max-width: 768px;
+    padding-inline: 1.5rem;
+  }
+
+  @media (--lg) {
+    max-width: 1024px;
+    padding-inline: 2rem;
+  }
+
+  @media (--xl) {
+    max-width: 1280px;
+    padding-inline: 3rem;
+  }
 }
 
-/* size full */
 .sf {
   margin: 0;
   min-width: 100%;
@@ -18,7 +32,6 @@
   overflow-x: hidden;
 }
 
-/* Centering Utilities */
 .center {
   display: grid;
   place-items: center;
@@ -31,51 +44,39 @@
   justify-content: center;
 }
 
-/* Padding and Margin Utilities */
+/* Padding Utilities */
 .p-1 {
   padding: var(--space-xs);
 }
-
 .p-2 {
   padding: var(--space-sm);
 }
-
 .p-3 {
   padding: var(--space-md);
 }
-
 .p-4 {
   padding: var(--space-lg);
 }
 
+/* Margin Utilities */
 .m-auto {
   margin: auto;
 }
-
 .mx-auto {
-  margin: unset auto;
+  margin-inline: auto;
 }
-
 .my-auto {
-  margin: auto unset;
+  margin-block: auto;
 }
-
 .m-1 {
   margin: var(--space-xs);
 }
-
 .m-2 {
   margin: var(--space-sm);
 }
-
 .m-3 {
   margin: var(--space-md);
 }
-
 .m-4 {
   margin: var(--space-lg);
 }
-
-/*
- * </Utilities>
-*/

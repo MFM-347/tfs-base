@@ -1,15 +1,3 @@
-/*
- * <Reset
- *  src="{
- *    name: modern-normalize,
- *    version: v3.0.1,
- *    License: MIT License,
- *    url: https://github.com/sindresorhus/modern-normalize/
- *  }
- * >
-*/
-
-/* Document */
 *,
 ::before,
 ::after {
@@ -19,16 +7,21 @@
 html {
   font-family: var(--font-normal);
   line-height: 1.15;
+  -moz-tab-size: 4;
   tab-size: 4;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  color: var(--color-text);
   font-size: 1.15rem;
+  font-family: var(--font-normal);
   line-height: 1.5;
+  background: var(--color-bg);
 }
 
-/* Typography */
 b,
 strong {
   font-weight: 800;
@@ -40,13 +33,14 @@ samp,
 pre {
   color: var(--color-code);
   font-size: 1rem;
+  font-family: var(--font-mono);
+  line-height: 1.5;
 }
 
 small {
   font-size: 80%;
 }
 
-/* Subscript/Superscript */
 sub,
 sup {
   position: relative;
@@ -63,18 +57,19 @@ sup {
   top: -0.5rem;
 }
 
-/* Tables */
 table {
+  width: 100%;
   border-color: currentColor;
+  border-collapse: collapse;
 }
 
-/* Forms */
 button,
 input,
 optgroup,
 select,
 textarea {
   margin: 0;
+  color: inherit;
   font-size: 100%;
   font-family: inherit;
   line-height: 1.15;
@@ -86,8 +81,12 @@ button,
 [type="submit"],
 .btn,
 a.btn {
+  padding: 0;
   line-height: normal;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   appearance: auto;
 }
 
@@ -118,11 +117,6 @@ progress {
   appearance: auto;
 }
 
-/* Interactive Elements */
 summary {
   display: list-item;
 }
-
-/*
-  * </Reset>
- */

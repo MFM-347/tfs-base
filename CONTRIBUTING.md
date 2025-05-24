@@ -7,7 +7,7 @@ Your contributions, whether big or small, are essential to the success of this p
 
 ### Step 1: Fork the Repository
 
-1. Navigate to the [BaseCSS repository](https://github.com/MFM-347/BaseCSS).
+1. Navigate to the [BaseCSS repository](https://github.com/MFM-347/tfs-base).
 2. Click the **Fork** button in the top-right corner to create your own copy of the repository.
 
 ### Step 2: Clone Your Fork
@@ -15,7 +15,7 @@ Your contributions, whether big or small, are essential to the success of this p
 Clone your forked repository to your local machine:
 
 ```bash
-git clone https://github.com/<your-username>/BaseCSS.git
+git clone https://github.com/MFM-347/tfs-base.git
 cd BaseCSS
 ```
 
@@ -104,7 +104,7 @@ Include the following in your PR description:
 
 ## Reporting Issues
 
-Encountered a bug or have a great idea for a new feature? Create an issue [here](https://github.com/MFM-347/BaseCSS/issues).
+Encountered a bug or have a great idea for a new feature? Create an issue [here](https://github.com/MFM-347/tfs-base/issues).
 
 ### Guidelines for Issues:
 
@@ -146,7 +146,7 @@ To maintain a high-quality codebase, please follow these guidelines:
 
 If you’re unsure about something or need guidance:
 
-- Start a [discussion](https://github.com/MFM-347/BaseCSS/discussions).
+- Start a [discussion](https://github.com/MFM-347/tfs-base/discussions).
 - Join our community for support and collaboration.
 
 Thank you ✨ for contributing to BaseCSS! Your effort makes this project better for everyone.
