@@ -1,6 +1,6 @@
 {
   "name": "tfs-base",
-  "version": "9.9.8",
+  "version": "9.9.9",
   "private": false,
   "type": "commonjs",
   "description": "A lightweight css library designed to simplify responsive and scalable web design.",
@@ -51,10 +51,8 @@
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
     "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.1.6",
     "prettier": "^3.5.3"
   },
-  "license": "MIT",
-  "dependencies": {
-    "postcss-preset-env": "^10.1.6"
-  }
+  "license": "MIT"
 }

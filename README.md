@@ -1,7 +1,6 @@
 # TFS Base
 
 [![Latest Version](https://img.shields.io/npm/v/tfs-base?style=for-the-badge)](https://www.npmjs.com/package/@tfs-8/basecss)
-![npm minified size](https://img.shields.io/bundlephobia/min/tfs-base?style=for-the-badge)
 [![Downloads](https://img.shields.io/npm/dm/tfs-base?style=for-the-badge)](https://www.npmjs.com/package/@tfs-8/basecss)
 [![License MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://github.com/MFM-347/tfs-base/blob/main/LICENSE)
 
