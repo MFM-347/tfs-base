@@ -28,7 +28,7 @@ abbr,
 samp,
 kbd,
 var {
-  color: var(--color-text);
+  color: var(--clr-text);
 }
 
 body,

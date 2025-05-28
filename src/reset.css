@@ -15,11 +15,11 @@ html {
 
 body {
   margin: 0;
-  color: var(--color-text);
+  color: var(--clr-text);
   font-size: 1.15rem;
   font-family: var(--font-normal);
   line-height: 1.5;
-  background: var(--color-bg);
+  background: var(--clr-bg);
 }
 
 b,
@@ -31,7 +31,7 @@ code,
 kbd,
 samp,
 pre {
-  color: var(--color-code);
+  color: var(--clr-code);
   font-size: 1rem;
   font-family: var(--font-mono);
   line-height: 1.5;
@@ -59,7 +59,7 @@ sup {
 
 table {
   width: 100%;
-  border-color: currentColor;
+  border-clr: currentColor;
   border-collapse: collapse;
 }
 

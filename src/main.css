@@ -4,3 +4,32 @@
 @import "type.css";
 @import "utilities.css";
 @import "components.css";
+
+html,
+body {
+  transition:
+    background-clr var(--transition-fast) var(--transition-ease),
+    color var(--transition-fast) var(--transition-ease),
+    border-clr var(--transition-fast) var(--transition-ease);
+  color: var(--clr-text);
+  font-family: var(--font-normal);
+  background-clr: var(--clr-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  max-inline-size: 100vw;
+  min-block-size: 100vh;
+}
+
+:focus-visible {
+  outline: 1.25px solid var(--btn-bg, var(--clr-accent));
+  outline-offset: 1.5px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}

@@ -19,8 +19,8 @@ aside {
 section {
   margin: 3rem 0;
   padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 3.5);
-  border-top: 0.8px solid var(--color-text);
-  border-bottom: 0.9px solid var(--color-text);
+  border-top: 0.8px solid var(--clr-text);
+  border-bottom: 0.9px solid var(--clr-text);
 }
 
 footer {
@@ -29,17 +29,17 @@ footer {
   padding: var(--space-sm) var(--space-md);
   font-size: 0.9rem;
   text-align: center;
-  border-top: 1px solid var(--color-text);
+  border-top: 1px solid var(--clr-text);
 }
 
 :is(input, button, textarea, select) {
   transition:
     color 175ms ease-in-out,
     outline 175ms ease-in-out,
-    background-color 175ms ease-in-out,
+    background-clr 175ms ease-in-out,
     border 175ms ease-in-out,
     box-shadow 175ms ease-in-out;
-  accent-color: var(--color-accent);
+  accent-clr: var(--clr-accent);
 }
 
 input[type="checkbox"],
@@ -59,7 +59,7 @@ input[type="radio"] {
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background-color: var(--accent);
+  background-clr: var(--accent);
 }
 
 input[type="checkbox"]:checked::after {
@@ -69,7 +69,7 @@ input[type="checkbox"]:checked::after {
   width: 0.18em;
   height: 0.32em;
   font-size: 1.8em;
-  background-color: transparent;
+  background-clr: transparent;
   border-right: solid var(--bg) 0.08em;
   border-bottom: solid var(--bg) 0.08em;
   border-radius: 0;
@@ -84,7 +84,7 @@ input[type="radio"]:checked::after {
   width: 0.25em;
   height: 0.25em;
   font-size: 32px;
-  background-color: var(--bg);
+  background-clr: var(--bg);
   border-radius: 100%;
   content: " ";
 }
@@ -98,16 +98,16 @@ input[type="password"] {
   max-width: 100%;
   padding: var(--space-sm, 0.5rem) var(--space-md, 1rem);
   font-size: var(--form-fs, 16px);
-  border: 1px solid var(--border, var(--color-text));
+  border: 1px solid var(--border, var(--clr-text));
   border-radius: var(--radius);
   transition:
-    border-color 200ms ease-in-out,
+    border-clr 200ms ease-in-out,
     box-shadow 200ms ease-in-out;
 
   &:focus {
-    border-color: var(--color-accent);
+    border-clr: var(--clr-accent);
     outline-offset: 2.5px;
-    box-shadow: 0 0 4px var(--color-accent);
+    box-shadow: 0 0 4px var(--clr-accent);
   }
 
   &::placeholder {
@@ -118,7 +118,7 @@ input[type="password"] {
 
 input:focus-visible,
 textarea:focus-visible {
-  outline: 1.5px solid var(--color-accent);
+  outline: 1.5px solid var(--clr-accent);
 }
 
 button,
@@ -134,7 +134,7 @@ a.btn {
   color: var(--btn-fg, var(--fg));
   font-size: var(--form-fs, 1rem);
   text-align: center;
-  background: var(--btn-bg, var(--color-accent));
+  background: var(--btn-bg, var(--clr-accent));
   border: none;
   border-radius: var(--radius);
   outline: none;
@@ -145,17 +145,17 @@ a.btn {
     border 200ms ease-in;
 
   &:hover {
-    background: var(--btn-bg-hover, var(--color-accent-hover));
+    background: var(--btn-bg-hover, var(--clr-accent-hover));
   }
 
   &:focus {
-    background: var(--btn-bg, var(--color-accent));
-    outline: 1.25px solid var(--btn-bg, var(--color-accent));
+    background: var(--btn-bg, var(--clr-accent));
+    outline: 1.25px solid var(--btn-bg, var(--clr-accent));
     outline-offset: 1.75px;
   }
 
   &:focus-visible {
-    outline: 1.25px solid var(--btn-bg, var(--color-accent));
+    outline: 1.25px solid var(--btn-bg, var(--clr-accent));
     outline-offset: 1.75px;
   }
 }
@@ -165,17 +165,17 @@ a.btn {
   width: auto;
   padding: var(--space-sm) var(--space-md);
   display: inline-block;
-  color: var(--btn-bg, var(--color-accent));
+  color: var(--btn-bg, var(--clr-accent));
   font-size: var(--form-fs, 16px);
   text-align: center;
   background: transparent;
-  border: 2px solid var(--btn-bg, var(--color-accent));
+  border: 2px solid var(--btn-bg, var(--clr-accent));
   border-radius: var(--radius);
   cursor: pointer;
 
   &:hover {
     color: var(--btn-text, var(--fg));
-    background: var(--btn-bg, var(--color-accent));
+    background: var(--btn-bg, var(--clr-accent));
   }
 }
 

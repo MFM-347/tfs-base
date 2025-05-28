@@ -1,60 +1,91 @@
+/* ======================================================
+   Base Theme (Default Light + Global Font & Spacing Setup)
+====================================================== */
 :root {
-  --color-bg: #f4f4f5;
-  --color-text: #18181b;
-  --color-code: #d6d3d1;
+  /* Color Variables - Light Mode */
+  --clr-bg: #f4f4f5;
+  --clr-text: #18181b;
+  --clr-code: #d6d3d1;
 
-  --color-accent: #195bff;
-  --color-accent-hover: #003cff;
-  --color-success: #19ff4a;
-  --color-warning: #ffbd19;
-  --color-danger: #ff195b;
+  --clr-accent: #195bff;
+  --clr-accent-hover: #003cff;
+  --clr-success: #19ff4a;
+  --clr-warning: #ffbd19;
+  --clr-danger: #ff195b;
 
-  --font-normal: "Segoe UI", "Roboto", system-ui, -apple-system, "Arial", sans-serif;
-  --font-heading: "Rubik", "Inter", "Roboto", "Segoe UI", sans-serif;
-  --font-mono: "Consolas", ui-monospace, Courier, monospace;
+  /* Font Variables */
+  --font-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, Arial, sans-serif;
+  --font-heading: "Rubik", "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
 
+  /* Spacing */
   --spacing: 0.25rem;
   --space-xs: calc(var(--spacing) * 1);
   --space-sm: calc(var(--spacing) * 1.5);
   --space-md: calc(var(--spacing) * 2);
   --space-lg: calc(var(--spacing) * 3);
+
+  /* Border Radius */
   --radius: 0.375rem;
 
+  /* Transitions */
   --transition-fast: 0.12s;
   --transition-ease: ease-in-out;
-  font-family: var(--font-normal);
 
-  transition:
-    background-color var(--transition-fast) var(--transition-ease),
-    color var(--transition-fast) var(--transition-ease),
-    border-color var(--transition-fast) var(--transition-ease);
+  /* Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Light mode as default */
+  color-scheme: light;
 }
 
-.dark {
-  --color-bg: #18181b;
-  --color-text: #f4f4f5;
-  --color-code: #44403b;
+/* ======================================================
+   AUTO Theme (Based on System Preference)
+====================================================== */
+[data-theme-type="auto"] {
+  color-scheme: light;
 }
 
-.dark :is(img, video) {
-  opacity: 0.925;
+@media (prefers-clr-scheme: dark) {
+  [data-theme-type="auto"] {
+    --clr-bg: #18181b;
+    --clr-text: #f4f4f5;
+    --clr-code: #44403b;
+    color-scheme: dark;
+  }
 }
 
-body {
-  overflow-x: hidden;
-  color: var(--color-text);
-  font-family: var(--font-normal);
-  background-color: var(--color-bg);
-  max-inline-size: 100vw;
-  min-block-size: 100vh;
+/* ======================================================
+   DATA-Driven Theme Switching
+====================================================== */
+[data-theme-type="data"][data-theme="light"] {
+  --clr-bg: #f4f4f5;
+  --clr-text: #18181b;
+  --clr-code: #d6d3d1;
+  color-scheme: light;
 }
 
-:focus-visible {
-  outline: 1.25px solid var(--btn-bg, var(--color-accent));
-  outline-offset: 1.5px;
+[data-theme-type="data"][data-theme="dark"] {
+  --clr-bg: #18181b;
+  --clr-text: #f4f4f5;
+  --clr-code: #44403b;
+  color-scheme: dark;
 }
 
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
+/* ======================================================
+   CLASS-Based Theme Switching
+====================================================== */
+[data-theme-type="class"] .light {
+  --clr-bg: #f4f4f5;
+  --clr-text: #18181b;
+  --clr-code: #d6d3d1;
+  color-scheme: light;
+}
+
+[data-theme-type="class"] .dark {
+  --clr-bg: #18181b;
+  --clr-text: #f4f4f5;
+  --clr-code: #44403b;
+  color-scheme: dark;
 }
