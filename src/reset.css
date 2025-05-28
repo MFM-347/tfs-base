@@ -59,8 +59,8 @@ sup {
 
 table {
   width: 100%;
-  border-clr: currentColor;
   border-collapse: collapse;
+  border-clr: currentColor;
 }
 
 button,
